@@ -1,0 +1,72 @@
+// 
+// Theme Name: New Clean Template
+// Version: 3.6
+// Tags: clean, development, html5, sass, jquery, slick.js
+// Description: Clean wordpress theme with slick and visible js function
+// Author: DHL
+// Author URI: telegram @dhljob
+//
+
+:root
+    --container: 1170px
+    --text: #3d3d3d
+    --size: 14px
+    --stroke: #e3e3e3
+    --gray: #817F7F
+
+
+body
+    font-family: 'Montserrat', sans-serif
+    font-size: var(--size)
+    color: var(--text)
+    padding: 0
+    margin: 0
+
+a
+    color: inherit
+    text-decoration: none
+*
+    box-sizing: border-box
+input:focus
+    outline: none
+button:focus
+    outline: none
+
+.row
+    display: flex
+.d-flex
+    display: flex
+.flex-wrap
+    flex-wrap: wrap
+.left, .right
+    width: 50%
+    padding: 0 10px
+
+.aic
+    align-items: center
+.jcc
+    justify-content: center
+.jcsb
+    justify-content: space-between
+
+.container
+    width: 100%
+    height: 100%
+    max-width: var(--container)
+    padding: 0 20px
+    margin: auto
+
+.menu-btn
+    display: none
+.only-xs
+    display: none
+
+@media screen and (max-width: 768px)
+
+    .only-xs
+        display: block
+    .only-md
+        display: none
+
+@import layout/header
+@import layout/banner

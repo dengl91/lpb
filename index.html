@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>LPB</title>
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="preload" as="font" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="public/css/common.css">
+    
+</head>
+<body>
+
+	<div class="topbar">
+		<div class="container">
+			<div class="toplink">
+				<a href="/" class="toplink__item active">Uzņēmumiem</a>
+				<a href="/" class="toplink__item">Finteks</a>
+				<a href="/" class="toplink__item">E-komercija</a>
+				<span class="toplink__line"></span>
+			</div>
+			<div class="topmenu row">
+				<a href="/" class="topmenu__link">Par banku</a>
+				<a href="/" class="topmenu__link">Izvēlne</a>
+				<div class="topmenu__menu-btn">
+					<div class="topmenu__menu-btn__item"></div>
+					<div class="topmenu__menu-btn__item"></div>
+					<div class="topmenu__menu-btn__item"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+    
+    <header>
+		<div class="container">
+			<a href="/" class="header__logo">
+    	        <img src="public/img/logo.svg">
+    	    </a>
+    	    <div class="header__nav">
+				<a href="/" class="header__nav__link search"></a>
+				<a href="/" class="header__nav__link language">English</a>
+				<a href="/" class="header__nav__link e-banking">e-banking</a>
+			</div>
+    	    <div class="header__menu-btn">
+    	        <div class="header__menu-btn__item"></div>
+    	        <div class="header__menu-btn__item"></div>
+    	        <div class="header__menu-btn__item"></div>
+    	    </div>
+		</div>
+	</header>
+
+	<section class="banner">
+		<div class="container">
+			<div class="row aic animate__animated animate__fadeIn">
+				<div class="banner__header">
+					<h2>Vairāk nekā klasiska Banka – tavs e-komercijas partneris</h2>
+					<div class="banner__header-text">
+						LPB Bank e-komercijas risinājumi -  ērts maksājumu pieņemšanas veids jūsu uzņēmuma mājaslapā, izmantojot VISA un MasterCard maksājumu kartes, kā arī Apple Pay integrāciju
+					</div>
+				</div>
+				<a href="/" class="banner__learn_more">Lasīt vairāk...</a>
+			</div>
+			<div class="banner__slider">
+				<div class="banner__slider-item">
+					<div class="banner__slider-item-img">
+						<img src="public/img/wallet.svg" alt="Bez starpniekiem">
+					</div>
+					<div class="banner__slider-item-header">Bez starpniekiem</div>
+					<div class="banner__slider-item-text">Lorem ipsum sit amet et sur resurrect emeru.</div>
+					<a href="/" class="banner__slider-item-link"></a>
+				</div>
+				<div class="banner__slider-item">
+					<div class="banner__slider-item-img">
+						<img src="public/img/currency.svg" alt="Multivalūtu apstrāde">
+					</div>
+					<div class="banner__slider-item-header">Multivalūtu apstrāde</div>
+					<div class="banner__slider-item-text">Lorem ipsum sit amet et sur resurrect emeru.</div>
+					<a href="/" class="banner__slider-item-link"></a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$( document ).ready(function() {
+			$('.banner').css('background-image', 'url(public/img/main-bg.jpg)');
+			$('.topmenu__menu-btn').on('click', function() {
+				$(this).toggleClass('active');
+			});
+		});
+	</script>
+    
+</body>
+</html>
