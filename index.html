@@ -82,9 +82,17 @@
 				</div>
 				<div class="banner__slider-item">
 					<div class="banner__slider-item-img">
-						<img src="public/img/pen.svg" alt="Multivalūtu apstrāde">
+						<img src="public/img/pen.svg" alt="Kobrendinga kartes">
 					</div>
 					<div class="banner__slider-item-header">Kobrendinga kartes</div>
+					<div class="banner__slider-item-text">Lorem ipsum sit amet et sur resurrect emeru.</div>
+					<a href="/" class="banner__slider-item-link"></a>
+				</div>
+				<div class="banner__slider-item">
+					<div class="banner__slider-item-img">
+						<img src="public/img/bill.svg" alt="Komersantiem">
+					</div>
+					<div class="banner__slider-item-header">Komersantiem</div>
 					<div class="banner__slider-item-text">Lorem ipsum sit amet et sur resurrect emeru.</div>
 					<a href="/" class="banner__slider-item-link"></a>
 				</div>
@@ -96,7 +104,7 @@
 	<script>
 		$( document ).ready(function() {
 			$('.banner').css('background-image', 'url(public/img/main-bg.jpg)');
-			$('.topmenu__menu-btn').on('click', function() {
+			$('.topmenu__menu-btn, .header__menu-btn').on('click', function() {
 				$(this).toggleClass('active');
 			});
 		});
