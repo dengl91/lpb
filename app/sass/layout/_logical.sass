@@ -1,0 +1,60 @@
+// 
+// Theme Name: New Clean Template
+// _logical.sass
+//
+// app/sass/layout/
+//
+
+.logical
+    overflow: hidden
+    &__bg
+        height: 400px
+        background-repeat: no-repeat
+        background-position: 50%
+        background-size: cover
+        position: relative
+        &::after
+            content: ''
+            width: 430px
+            height: 600px
+            background: url(../img/logo__blend.svg) no-repeat 50%
+            position: absolute
+            top: 60px
+            left: 50%
+            transform: translateX(-80%)
+    &__title
+        width: 70%
+    &__description
+        width: 30%
+        padding: 100px 0 140px 0
+    h2
+        font-size: 100px
+        font-weight: 600
+        position: relative
+        &::after
+            content: ''
+            width: 90%
+            height: 12px
+            background: var(--yellow)
+            position: absolute
+            left: 0
+            bottom: -30px
+    .learn-more
+        margin: 0
+
+@media (max-width: 768px)
+    .logical
+        &__bg
+            height: 220px
+            &::after
+                width: 230px
+                height: 320px
+                background-size: contain
+                transform: translateX(-50%)
+        &__title
+            width: 100%
+        &__description
+            width: 100%
+            padding: 40px 0
+        h2
+            font-size: 40px

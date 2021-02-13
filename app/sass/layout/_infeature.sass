@@ -1,0 +1,43 @@
+// 
+// Theme Name: New Clean Template
+// _infeature.sass
+//
+// app/sass/layout/
+//
+
+.infeature
+    padding: 100px 0
+    overflow: hidden
+    &__item
+        text-align: center
+        border: 1px solid var(--stroke)
+        flex: 0 0 180px
+        padding: 48px
+        margin: 0 20px 0 0
+        cursor: pointer
+        transition: 0.3s
+        &:hover
+            background: linear-gradient(198deg, #F4C82D 0%, #AFD55E 100%)
+            border: 1px solid #ffffff00
+            svg
+                path
+                    fill: #fff !important
+            [class*=title]
+                color: #fff
+    &__img
+        svg
+            height: 64px
+    &__title
+        font-size: 20px
+        font-weight: 600
+        letter-spacing: 0.02em
+        margin: 32px 0 0 0
+
+@media (max-width: 768px)
+    .infeature
+        padding: 40px 0
+        &__item
+            width: calc(50% - 15px)
+            flex: auto
+            padding: 30px
+            margin: 0 15px 15px 0
