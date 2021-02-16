@@ -1,0 +1,61 @@
+// 
+// Theme Name: New Clean Template
+// _tabs.sass
+//
+// app/sass/layout/
+//
+
+.tabs
+    margin: 0 0 60px 0
+    position: relative
+    &__content
+        margin: 0 0 100px 0
+        overflow: hidden
+        .common-title
+            height: 140px
+            margin: 20px 0 80px 0
+    &__description
+        font-size: 18px
+        color: var(--gray)
+        line-height: 1.6
+        margin: 60px 0
+    &__img
+        height: 100%
+        display: flex
+.tabs-nav
+    line-height: 52px
+    display: flex
+    &__item
+        padding: 0 40px 0 0
+        cursor: pointer
+        &.active
+            font-weight: 600
+    &__line
+        width: 0
+        height: 3px
+        background: linear-gradient(90deg, #FCD60D 0%, #428BBF 100%)
+        display: block
+        position: absolute
+        left: 0
+        bottom: -2px
+        transition: 0.4s
+
+@media (max-width: 768px)
+    .tabs-nav
+        &__item
+            white-space: nowrap
+        &__line
+            bottom: 0
+    .tabs
+        overflow: auto
+        &__content
+            margin: 0 0 40px 0
+            .common-title
+                height: 100px
+                margin: 0 0 20px 1px
+            img
+                max-width: 100%
+        &__description
+            margin: 20px 0
+        &__img
+            height: auto

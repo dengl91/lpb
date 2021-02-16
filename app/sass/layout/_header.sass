@@ -23,10 +23,10 @@
         display: inline-block
         &.active
             font-weight: 600
-        &:nth-child(2):hover
+        &:nth-child(2):hover, &:nth-child(2).active
             ~ span
                 width: calc(((100vw - var(--container)) / 2) + 240px)
-        &:nth-child(3):hover
+        &:nth-child(3):hover, &:nth-child(3).active
             ~ span
                 width: calc(((100vw - var(--container)) / 2) + 370px)
     &__line

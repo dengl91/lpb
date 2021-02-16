@@ -3,7 +3,7 @@
 (function($) {
     $(document).ready(function() {
 
-        $('.banner__slider').slick({
+        $('.banner__slider.main').slick({
             infinite: true,
             slidesToShow: 5,
             slidesToScroll: 2,
@@ -20,10 +20,58 @@
             ]
         });
 
-        $('.menu-btn').on('click', function() {
-            $(this).toggleClass('active');
-            $('header').toggleClass('active');
+        $('.banner__slider.testimonials').slick({
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            dots: true,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
         });
+
+        $('.experts__content').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true
+        });
+
+        $('[data-bg]').each(function() {
+            let bg_img = $(this).data('bg');
+            $(this).css('background-image', 'url(' + bg_img + ')');
+        });
+        
+        $('.topmenu__menu-btn, .header__menu-btn').on('click', function() {
+            $(this).toggleClass('active');
+        });
+
+        $('.tabs-nav__item.active').each(function() {
+            tabs_line($(this));
+        });
+
+        $('.tabs-nav__item').hover(function() {
+            tabs_line($(this));
+        }, function() {
+            tabs_line($(this).siblings('.active'));
+        });
+
+        function tabs_line(e) {
+            let tab_index = e.index();
+            let line_width = e.outerWidth() - 20;
+            for ( i = 0; i < tab_index; i++ ) {
+                line_width += e.siblings().eq(i).outerWidth();
+            }
+            let window_width = $(window).width();
+            let container_width = $('.container').width();
+            e.siblings('.tabs-nav__line').css('width',  + (window_width - container_width) / 2 + Math.round(line_width));
+        }
 
         $('.popup-form-content').mousedown( function(e) {
             if (e.target !== this)

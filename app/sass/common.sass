@@ -15,6 +15,8 @@
     --gray: #817F7F
     --yellow: #FCD60D
     --brown: #CAAC0E
+    --orange: #F4C82D
+    --green: #AFD55E
 
 @font-face
     font-family: 'Stag Sans'
@@ -48,6 +50,8 @@ input:focus
     outline: none
 button:focus
     outline: none
+textarea:focus
+    outline: none
 
 .row
     display: flex
@@ -55,13 +59,19 @@ button:focus
     display: flex
 .flex-wrap
     flex-wrap: wrap
+.flex-col
+    flex-direction: column
 .left, .right
     width: 50%
     padding: 0 10px
+.col-20
+    width: 20%
 .col-30
     width: 30%
 .col-40
     width: 40%
+.col-50
+    width: 50%
 .col-60
     width: 60%
 .col-70
@@ -87,7 +97,7 @@ button:focus
     line-height: 60px
     background: url(../img/arrow-right.svg) no-repeat top 50% right 20px #fff
     padding: 0 30px
-    margin: 0 0 0 auto
+    margin: 0 0 20px 0
     display: block
     transition: background 0.4s
     &:hover, &.active
@@ -100,12 +110,19 @@ button:focus
             box-shadow: 0 0 0 1px var(--text) inset
     &.align-left
         margin: 0
+.flex-col
+    .learn-more
+        margin: 0
 
+.common
+    overflow: hidden
 .common-title
     height: 130px
     font-size: 40px
     font-weight: 600
-    padding: 60px 0 0 1px
+    display: flex
+    align-items: center
+    padding: 1% 0 0 1px
     margin: 20px 0 40px 0
     position: relative
     &::after
@@ -140,6 +157,11 @@ button:focus
         left: 0
         z-index: -1
 
+.simple__bg
+    width: 100%
+    height: 520px
+    background-size: cover
+
 .delay-200
     animation-delay: 200ms
 .delay-400
@@ -154,6 +176,7 @@ button:focus
 footer
     background: url(../img/footer__bg.svg) no-repeat right 100px bottom 0px #323232
     padding: 100px 0 40px 0
+    margin: 80px 0 0 0
     position: relative
     &::after
         content: ''
@@ -258,13 +281,21 @@ footer
         &-title
             height: 80px
             font-size: 24px
-            padding: 40px 0 0 1px
+            padding: 1% 0 0 1px
+    
+    .description
+        margin: 0 0 20px 0
 
     .quote
         margin: 0 0 30px 0
 
+    .simple
+        &__bg
+            height: 300px
+
     footer
         padding: 40px 0
+        margin: 40px 0 0 0
 
     .footer
         &__first-row
@@ -291,3 +322,7 @@ footer
 @import layout/featured
 @import layout/logical
 @import layout/infeature
+@import layout/tabs
+@import layout/experts
+@import layout/steps
+@import layout/request

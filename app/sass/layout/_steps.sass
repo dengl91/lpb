@@ -1,0 +1,105 @@
+// 
+// Theme Name: New Clean Template
+// _steps.sass
+//
+// app/sass/layout/
+//
+
+.steps
+    &__title
+        font-size: 20px
+        font-weight: 600
+        line-height: 40px
+        margin: 0 0 80px 0
+        &::before
+            content: ''
+            width: 100vw
+            height: 1px
+            background: var(--stroke)
+            position: absolute
+            top: 50px
+    &__item
+        flex: 1 1 0
+        padding: 0 20px 0 0
+        position: relative
+        &::after
+            content: ''
+            width: 24px
+            height: 24px
+            background: url(../img/arrow-right.svg) no-repeat
+            position: absolute
+            top: 30px
+            right: 40px
+        &:last-child
+            &::after
+                display: none
+    &__img
+        width: 64px
+        height: 64px
+        display: flex
+        align-items: flex-end
+        margin: 0 0 30px 0
+        img
+            max-width: 100%
+            max-height: 100%
+    &__item-title
+        font-size: 18px
+        font-weight: 600
+        margin: 0 0 20px 0
+    &__description
+        color: var(--gray)
+
+.solution
+    padding: 100px 0
+    &__title
+        font-size: 24px
+        line-height: 30px
+        margin: 60px 0 20px 0
+    &__description
+        font-size: 18px
+        color: var(--gray)
+        line-height: 30px
+        margin: 0 0 30px 0
+    &__item
+        font-size: 20px
+        font-weight: 600
+        text-align: center
+        background: #fff
+        box-shadow: 0 0 10px #0000001a
+        flex: 1 1 0
+        padding: 58px 40px
+        margin: 0 20px 0 0
+        &:hover
+            color: #fff
+            background: linear-gradient(198deg, var(--orange) 0%, var(--green) 100%)
+            img
+                mix-blend-mode: color-dodge
+    &__img
+        height: 100px
+        margin: 0 0 40px 0
+
+@media (max-width: 768px)
+    .steps
+        &__title
+            margin: 0 0 40px 0
+        &__item
+            &::after
+                display: none
+
+    .solution
+        padding: 40px 0
+        &__title
+            margin: 20px 0
+        &__item
+            font-size: 16px
+            background: none
+            box-shadow: none
+            flex: 0 0 33.33%
+            padding: 20px 20px 0 0
+            margin: 0
+        &__img
+            height: 64px
+            margin: 0 0 20px 0
+            img
+                width: auto
+                height: 100%
