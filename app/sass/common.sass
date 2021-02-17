@@ -55,6 +55,7 @@ textarea:focus
 
 .row
     display: flex
+    margin: 0 -10px
 .d-flex
     display: flex
 .flex-wrap
@@ -68,6 +69,8 @@ textarea:focus
     width: 20%
 .col-30
     width: 30%
+.col-33
+    width: 33.33%
 .col-40
     width: 40%
 .col-50
@@ -76,6 +79,8 @@ textarea:focus
     width: 60%
 .col-70
     width: 70%
+.col-grow
+    flex-grow: 1
 
 .aic
     align-items: center
@@ -110,6 +115,9 @@ textarea:focus
             box-shadow: 0 0 0 1px var(--text) inset
     &.align-left
         margin: 0
+    &.wide
+        width: 340px
+        margin: auto 0
 .flex-col
     .learn-more
         margin: 0
@@ -134,9 +142,13 @@ textarea:focus
         top: 0
         left: 0
         z-index: -1
+    &__tip
+        font-size: 18px
+        color: var(--gray)
+        margin: -60px 0 0 40px
 
 .description
-    max-width: 400px
+    max-width: 90%
     font-size: 18px
     color: var(--gray)
     line-height: 1.6
@@ -176,7 +188,7 @@ textarea:focus
 footer
     background: url(../img/footer__bg.svg) no-repeat right 100px bottom 0px #323232
     padding: 100px 0 40px 0
-    margin: 80px 0 0 0
+    margin: 100px 0 0 0
     position: relative
     &::after
         content: ''
@@ -326,3 +338,5 @@ footer
 @import layout/experts
 @import layout/steps
 @import layout/request
+@import layout/counter
+@import layout/contact

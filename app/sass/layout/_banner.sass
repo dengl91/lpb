@@ -28,6 +28,21 @@
         line-height: 80px
         text-shadow: 0 0 4px #0000001a
         margin: 0 0 30px 0
+    &__title
+        &--alt
+            font-size: 100px
+            font-weight: 600
+            line-height: 80px
+            margin: 0
+            position: relative
+            &::after
+                content: ''
+                width: 90%
+                height: 12px
+                background: var(--yellow)
+                position: absolute
+                left: 0
+                bottom: -30px
     &__header
         padding: 0 0 40px 0
         &-text
@@ -40,9 +55,10 @@
         display: flex
         position: relative
         &-item
+            height: 100%
             background: #fff
-            box-shadow: 0 10px 10px #0000001a
-            display: flex
+            box-shadow: 0 4px 10px #0000001a
+            display: flex !important
             flex: 0 0 250px
             flex-direction: column
             padding: 30px
@@ -64,6 +80,7 @@
                 width: 20px
                 height: 20px
                 background: #fff
+                box-shadow: 8px 8px 10px -2px #0000001a
                 position: absolute
                 left: 20px
                 bottom: -10px
@@ -75,14 +92,12 @@
                     width: auto
                     height: 100%
             &-header
-                min-height: 42px
                 font-size: 20px
                 font-weight: 600
                 margin: 0 0 20px 0
             &-text
                 color: var(--gray)
                 line-height: 20px
-                margin: 0 0 20px 0
                 position: relative
                 z-index: 1
             &-link
@@ -105,11 +120,15 @@
             margin: 0 0 100px 0
 
 .slick
+    &-track
+        display: flex
     &-list
         padding: 0 0 20px 0
         margin: 0 -10px
     &-slide
-        margin: 0 10px
+        margin: 10px
+        > div
+            height: 100%
     &-next
         width: 16px
         height: 16px

@@ -3,8 +3,12 @@
 (function($) {
     $(document).ready(function() {
 
+        $('.banner__slider.main').on('init', function(event, slick){
+            slick.$slides.css('height', slick.$slideTrack.height() + 'px');
+        });
+
         $('.banner__slider.main').slick({
-            infinite: true,
+            infinite: false,
             slidesToShow: 5,
             slidesToScroll: 2,
             dots: true,
