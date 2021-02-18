@@ -77,6 +77,33 @@
             e.siblings('.tabs-nav__line').css('width',  + (window_width - container_width) / 2 + Math.round(line_width));
         }
 
+        // Counter
+
+        $(window).scroll( function() {
+            $('[data-count]').each(function () {
+                let target = $(this);
+                if ( isOnScreen(target) && !target.hasClass('counted') ) {
+                    countUp(target);
+                    target.addClass('counted');
+                }
+            });
+        });
+
+        function countUp(target) {
+            let defaultCount = parseFloat(target.text());
+            let totalCount = target.data('count');
+            let increaser = totalCount / 50;
+            defaultCount = defaultCount + increaser;
+            if ( totalCount >= defaultCount ) {
+                target.text(parseFloat(defaultCount).toFixed(1));
+                setTimeout(() => {
+                    countUp(target);
+                }, 100);
+            } else {
+                return;
+            }
+        }
+
         $('.timeline__row--title').on('click', function() {
             $(this).closest('.timeline__item').toggleClass('active');
         });
