@@ -77,6 +77,10 @@
             e.siblings('.tabs-nav__line').css('width',  + (window_width - container_width) / 2 + Math.round(line_width));
         }
 
+        $('.timeline__row--title').on('click', function() {
+            $(this).closest('.timeline__item').toggleClass('active');
+        });
+
         $('.popup-form-content').mousedown( function(e) {
             if (e.target !== this)
                 return;

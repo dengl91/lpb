@@ -1,0 +1,101 @@
+// 
+// Theme Name: New Clean Template
+// _timeline.sass
+//
+// app/sass/layout/
+//
+
+.timeline
+    max-width: 780px
+    margin: -100px 0 100px auto
+    &::after
+        content: ''
+        width: 480px
+        height: 1352px
+        background: url(../img/blured__bg.png) no-repeat 50%
+        background-size: cover
+        position: absolute
+        right: 0
+        bottom: 0
+        z-index: -1
+    &__item
+        max-height: 64px
+        overflow: hidden
+        &.active
+            max-height: 100%
+    &__row
+        font-size: 14px
+        color: var(--gray)
+        line-height: 64px
+        display: flex
+        padding: 0 10px
+        &--title
+            font-size: 20px
+            color: var(--text)
+            font-weight: 600
+            cursor: pointer
+    &__title
+        width: 20%
+        text-align: right
+    &__path
+        width: 20%
+        position: relative
+        &::before
+            content: ''
+            width: 1px
+            height: 100%
+            background: var(--text)
+            position: absolute
+            top: 0
+            left: 50%
+            [class*=--title] &
+                height: 50%
+                top: 50%
+        &::after
+            content: ''
+            width: 14px
+            height: 14px
+            background: #fff
+            border: 1px solid var(--text)
+            border-radius: 50%
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            [class*=--title] &
+                height: 1px
+                background: var(--text)
+                border: none
+                border-radius: 0
+    &__description
+        width: 60%
+        line-height: 14px
+        background: #fff
+        box-shadow: 0 0 10px #0000001a
+        align-self: center
+        padding: 20px
+        margin: 10px 0
+    &__toggle
+        width: 60%
+    &__minus
+        display: none
+        .active &
+            display: block
+    &__plus
+        display: block
+        .active &
+            display: none
+
+@media (max-width: 768px)
+    .timeline
+        margin: 0 0 40px 0
+        &__row
+            font-size: 12px
+            &--title
+                font-size: 14px
+        &__title
+            display: flex
+            align-items: center
+            justify-content: flex-end
+        &__description
+            padding: 10px 15px
