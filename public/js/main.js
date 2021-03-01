@@ -77,6 +77,25 @@
             e.siblings('.tabs-nav__line').css('width',  + (window_width - container_width) / 2 + Math.round(line_width));
         }
 
+        // modal
+
+        $('.modal__close, .modal__blur').on('click', function(e) {
+            if ( e.target == e ) return;
+            $(this).closest('.modal').removeClass('active');
+        });
+
+        $('.staff__item').on('click', function() {
+            $('.modal--staff').addClass('active');
+            let staff_img         = $(this).find('img').attr('src');
+            let staff_title       = $(this).find('.staff__title').text();
+            let staff_position    = $(this).find('.staff__position').text();
+            let staff_description = $(this).find('.staff__description').text();
+            $('.modal--staff').find('img').attr('src', staff_img);
+            $('.modal--staff').find('.common-title').text(staff_title);
+            $('.modal--staff').find('.staff__position').text(staff_position);
+            $('.modal--staff').find('.staff__description').text(staff_description);
+        });
+
         // Counter
 
         $(window).scroll( function() {

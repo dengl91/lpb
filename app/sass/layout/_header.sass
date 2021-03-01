@@ -50,6 +50,8 @@
 
 header
     height: 82px
+    position: relative
+    z-index: 1
     .container
         display: flex
         align-items: center
@@ -70,9 +72,44 @@ header
             font-size: 16px
             font-weight: 600
             background: linear-gradient(90deg, #4E89E2 0%, #FCD60D 100%)
+            display: flex
+            align-items: center
             -webkit-background-clip: text
             -webkit-text-fill-color: transparent
-        
+    &__languages
+        height: 42px
+        display: flex
+        flex-direction: column
+        overflow: hidden
+        &:hover
+            overflow: visible
+        .language
+            width: 140px
+            text-align: center
+            line-height: 42px
+            background: #fff
+            position: relative
+            &:first-child
+                background: none
+                padding: 0 0 30px 0
+                &::before
+                    content: ''
+                    width: 20px
+                    height: 20px
+                    background: #fff
+                    position: absolute
+                    left: 50%
+                    bottom: -18px
+                    transform: translateX(-50%) rotate(45deg)
+                    z-index: -1
+                &::after
+                    content: ''
+                    width: 16px
+                    height: 8px
+                    background: url(../img/arrow-down.svg) no-repeat 50%
+                    display: inline-block
+            &:nth-child(2)
+                border-bottom: 1px solid var(--stroke)
 
 .topmenu__menu-btn
         width: 16px

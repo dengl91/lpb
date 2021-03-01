@@ -275,6 +275,108 @@ footer
             white-space: nowrap
             margin: 0 20px 0 60px
 
+/* Modal */
+
+.modal
+    width: 100%
+    height: 100%
+    display: flex
+    display: none
+    align-items: center
+    justify-content: center
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 9
+    &__content
+        width: 100%
+        max-width: var(--container)
+        position: relative
+        z-index: 1
+    &__close
+        width: 32px
+        height: 32px
+        background: url(../img/close.svg) no-repeat 50%
+        background-size: contain
+        cursor: pointer
+        position: absolute
+        top: 30px
+        right: 30px
+        z-index: 1
+    &__blur
+        width: 100%
+        height: 100%
+        background: #ffffffbf
+        position: absolute
+        z-index: 0
+        backdrop-filter: blur(10px)
+    &.active
+        display: flex
+
+/* Gutenberg */
+
+.wp-block-columns
+    max-width: var(--container)
+    padding: 0 20px
+    margin: 0 auto
+
+/* WPML */
+
+.wpml-ls-legacy-list-horizontal
+    padding: 0 0 0 10px !important
+.wpml-ls-legacy-list-horizontal > ul
+    max-height: 64px
+    display: flex
+    flex-direction: column
+    overflow: hidden
+.wpml-ls-legacy-list-horizontal
+    &:hover
+        ul
+            overflow: visible
+.wpml-ls-legacy-list-horizontal > ul > li.wpml-ls-current-language
+    text-align: center
+    order: 0
+    padding: 0 0 20px 0
+    position: relative
+    &::before
+        content: ''
+        width: 20px
+        height: 20px
+        background: #fff
+        position: absolute
+        left: 50%
+        bottom: -18px
+        transform: translateX(-50%) rotate(45deg)
+        z-index: -1
+    &::after
+        content: ''
+        width: 16px
+        height: 8px
+        background: url(../img/arrow-down.svg) no-repeat 50%
+        display: inline-block
+    a
+        line-height: 64px
+        border: none
+        padding: 0
+        display: inline-block
+        &:hover
+            text-shadow: none
+.wpml-ls-legacy-list-horizontal > ul > li
+    order: 1
+    a
+        text-align: center
+        line-height: 42px
+        background: #fff
+        border-bottom: 1px solid var(--stroke)
+        padding: 0 40px
+        &:hover
+            text-shadow: 0 0 1px #00000080
+    &:last-child
+        a
+            border: none
+.wpml-ls-display
+    display: none !important
+
 .menu-btn
     display: none
 .only-xs
@@ -333,6 +435,11 @@ footer
         &__description
             font-size: 18px
 
+    .modal
+        &__content
+            height: 100vh
+            overflow: auto
+
 @import layout/header
 @import layout/banner
 @import layout/featured
@@ -345,3 +452,4 @@ footer
 @import layout/counter
 @import layout/contact
 @import layout/timeline
+@import layout/staff
