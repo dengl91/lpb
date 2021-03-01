@@ -293,6 +293,7 @@ footer
         max-width: var(--container)
         position: relative
         z-index: 1
+        animation: flowIn 0.6s forwards
     &__close
         width: 32px
         height: 32px
@@ -309,9 +310,18 @@ footer
         background: #ffffffbf
         position: absolute
         z-index: 0
+        cursor: crosshair
         backdrop-filter: blur(10px)
     &.active
         display: flex
+
+@keyframes flowIn
+    0%
+        opacity: 0
+        transform: scale(0.5)
+    100%
+        opacity: 1
+        transform: scale(1)
 
 /* Gutenberg */
 
