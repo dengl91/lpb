@@ -1,0 +1,40 @@
+// 
+// Theme Name: New Clean Template
+// _card.sass
+//
+// app/sass/layout/
+//
+
+.card
+    display: flex
+    &__item
+        width: 280px
+        text-align: center
+        box-shadow: 0 0 10px #0000001a
+        padding: 52px
+        margin: 0 20px 0 0
+    &__img
+        height: 64px
+        margin: 0 0 48px 0
+        img
+            height: 100%
+    &__title
+        font-size: 20px
+        font-weight: 600
+        margin: 0 0 24px 0
+    &__description
+        color: var(--gray)
+        line-height: 18px
+
+@media (max-width: 768px)
+    .card
+        flex-wrap: wrap
+        margin: 40px 0
+        &__item
+            width: 100%
+            padding: 40px
+            margin: 0 0 20px 0
+        &__img
+            margin: 0 0 24px 0
+        &__title
+            margin: 0 0 15px 0

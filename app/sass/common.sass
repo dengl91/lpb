@@ -14,6 +14,7 @@
     --stroke: #e3e3e3
     --gray: #817F7F
     --yellow: #FCD60D
+    --yellow__blend: #FCD60D80
     --brown: #CAAC0E
     --orange: #F4C82D
     --green: #AFD55E
@@ -118,6 +119,16 @@ textarea:focus
     &.wide
         width: 340px
         margin: auto 0
+    &.pdf
+        width: fit-content
+        min-width: 260px
+        background: url(../img/pdf.svg) no-repeat top 50% right 20px
+        box-shadow: 0 0 0 1px var(--text)
+        padding: 0 60px 0 30px
+        transition: 0.4s
+        &:hover
+            color: var(--text)
+            box-shadow: 0 0 0 1px var(--text), 0 10px 20px -4px var(--yellow__blend)
 .flex-col
     .learn-more
         margin: 0
@@ -149,6 +160,8 @@ section
         font-size: 18px
         color: var(--gray)
         margin: -60px 0 0 40px
+.isolated
+    padding: 100px 0
 
 .description
     max-width: 90%
@@ -174,8 +187,20 @@ section
 
 .simple__bg
     width: 100%
-    height: 520px
+    height: 480px
+    background-position: 50% 100%
     background-size: cover
+    &--branding
+        margin: 100px 0
+        &::after
+            content: ""
+            width: 430px
+            height: 600px
+            background: url(../img/logo__blend.svg) no-repeat 50%
+            position: absolute
+            top: 40px
+            left: 50%
+            transform: translateX(-80%)
 
 .delay-200
     animation-delay: 200ms
@@ -410,6 +435,14 @@ footer
             height: 80px
             font-size: 24px
             padding: 1% 0 0 1px
+    .isolated
+        padding: 40px 0
+
+    .learn-more
+        &.pdf
+            width: 100%
+            line-height: normal
+            padding: 20px 60px 20px 30px
     
     .description
         font-size: 15px
@@ -421,6 +454,13 @@ footer
     .simple
         &__bg
             height: 300px
+            &--branding
+                margin: 40px 0
+                &::after
+                    width: 230px
+                    height: 320px
+                    background-size: contain
+                    transform: translateX(-50%)
 
     footer
         padding: 40px 0
@@ -465,3 +505,5 @@ footer
 @import layout/timeline
 @import layout/staff
 @import layout/threecol
+@import layout/card
+@import layout/hint

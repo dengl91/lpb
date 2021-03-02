@@ -25,6 +25,9 @@
             top: 40px
             left: 50%
             transform: translateX(-80%)
+        .simple &
+            height: 480px
+            margin: 0 0 200px 0
     &__title
         width: 60%
     &__description
@@ -48,6 +51,24 @@
             position: absolute
             left: 0
             bottom: -30px
+
+.logical-list
+    &__item
+        max-width: 480px
+        border-bottom: 1px solid var(--stroke)
+        padding: 0 0 24px 0
+        margin: 0 0 24px 0
+    &__title
+        font-size: 20px
+        font-weight: 600
+    &__description
+        color: var(--gray)
+        margin: 24px 0 0 0
+        ul
+            list-style-position: inside
+            padding: 0
+            li
+                margin: 0 0 10px 0
 
 .art-img
     background: url(../img/art__img.svg) no-repeat 50%
