@@ -1,0 +1,56 @@
+// 
+// Theme Name: New Clean Template
+// _threecol.sass
+//
+// app/sass/layout/
+//
+
+.threecol
+    display: flex
+    margin: 0 0 200px 0
+    &__item
+        color: #fff
+        background-size: cover
+        border-right: 1px solid #fff
+        padding: 120px 80px
+        &:hover
+            filter: brightness(110%) saturate(110%)
+    &__img
+        margin: 0 0 48px 0
+        img
+            height: 100px
+    &__title
+        font-size: 48px
+        font-weight: 600
+        line-height: 48px
+        text-shadow: 0 0 4px #0000001a
+        margin: 0 0 48px 0
+    &__description
+        font-size: 24px
+        line-height: 30px
+
+@media (max-width: 1440px)
+    .threecol
+        &__item
+            padding: 100px 60px
+        &__img
+            margin: 0 0 32px 0
+            img
+                height: 80px
+        &__title
+            font-size: 32px
+            line-height: 32px
+        &__description
+            font-size: 18px
+            line-height: 24px
+
+@media (max-width: 768px)
+    .threecol
+        flex-wrap: wrap
+        margin: 40px 0
+        &__item
+            padding: 40px 20px
+        &__img
+            margin: 0 0 20px 0
+        &__title
+            margin: 0 0 20px 0
