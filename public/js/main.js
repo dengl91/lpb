@@ -56,6 +56,8 @@
             $(this).toggleClass('active');
         });
 
+        // tabs
+
         $('.tabs-nav__item.active').each(function() {
             tabs_line($(this));
         });
@@ -76,6 +78,13 @@
             let container_width = $('.container').width();
             e.siblings('.tabs-nav__line').css('width',  + (window_width - container_width) / 2 + Math.round(line_width));
         }
+
+        $('.tabs-nav__item').on('click', function() {
+            $(this).addClass('active').siblings().removeClass('active');
+            let index = $(this).index();
+            $('.tabs__content').hide();
+            $('.tabs__content').eq(index).show();
+        });
 
         // modal
 
