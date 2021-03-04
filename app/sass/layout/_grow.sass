@@ -1,0 +1,41 @@
+// 
+// Theme Name: New Clean Template
+// _grow.sass
+//
+// app/sass/layout/
+//
+
+.grow
+    padding: 0 20px 0 0
+    img
+        height: 64px
+        margin: 0 0 20px 0
+    &__title
+        font-size: 24px
+        font-weight: 600
+        margin: 0 0 40px 0
+    &__line
+        width: 0
+        height: 48px
+        background: #3d3d3d
+        margin: 0 0 10px 0
+        transition: 2s
+        &.gray
+            background: #3d3d3d
+        &.yellow
+            background: var(--yellow)
+        &.light-gray
+            background: var(--stroke)
+    &__description
+        color: var(--gray)
+        margin: 0 0 20px 0
+
+@media (max-width: 768px)
+    .grow
+        padding: 0
+        margin: 0 0 40px 0
+        img
+            height: 44px
+        &__title
+            font-size: 18px
+            margin: 0 0 20px 0

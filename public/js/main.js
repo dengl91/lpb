@@ -115,6 +115,13 @@
                     target.addClass('counted');
                 }
             });
+            $('[data-width]').each(function () {
+                let target = $(this);
+                if ( isOnScreen(target) && !target.hasClass('counted') ) {
+                    setWidth(target);
+                    target.addClass('counted');
+                }
+            });
         });
 
         function countUp(target) {
@@ -130,6 +137,11 @@
             } else {
                 return;
             }
+        }
+
+        function setWidth(target) {
+            let width = target.data('width');
+            target.css('width', width + '%');
         }
 
         $('.timeline__row--title').on('click', function() {
