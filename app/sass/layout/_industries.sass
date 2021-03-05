@@ -1,0 +1,29 @@
+// 
+// Theme Name: New Clean Template
+// _industries.sass
+//
+// app/sass/layout/
+//
+
+.industries
+    margin: 40px 0
+    &__item
+        text-align: center
+        border-left: 1px solid var(--stroke)
+        flex: 1 1 0
+        &:last-child
+            border-right: 1px solid var(--stroke)
+    &__title
+        font-size: 24px
+        font-weight: 600
+        margin: 0 0 60px 0
+        position: relative
+        &::after
+            content: ''
+            width: 110px
+            height: 10px
+            background: var(--yellow)
+            position: absolute
+            top: 42px
+            left: 50%
+            transform: translateX(-50%)

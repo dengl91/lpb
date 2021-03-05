@@ -14,7 +14,7 @@
         background-repeat: no-repeat
         background-position: 50%
         background-size: cover
-        margin: 0 0 100px 0
+        margin: 0 0 120px 0
         position: relative
         &::after
             content: ''
@@ -32,6 +32,10 @@
         width: 60%
     &__description
         width: 40%
+        display: flex
+        flex-direction: column
+        .description
+            margin: auto 0 40px 0
         &.col-50
             width: 50%
             display: flex
@@ -40,7 +44,7 @@
     h2
         font-size: 100px
         font-weight: 600
-        line-height: 80px
+        line-height: 0.9
         margin: 0 0 100px 0
         position: relative
         &::after
@@ -90,6 +94,31 @@
         color: var(--gray)
         line-height: 18px
         letter-spacing: -0.01em
+    &.active
+        background: url(../img/art__img_animated.svg) no-repeat 50%
+        background-size: contain
+    &--second
+        background: url(../img/art__img--second.svg) no-repeat 50%
+        background-size: contain
+        &.active
+            background: url(../img/art__img--second_animated.svg) no-repeat 50%
+            background-size: contain
+        .art-img
+            &__item
+                width: 50%
+                height: 190px
+                display: flex
+                align-items: center
+                padding: 20px 40px 0
+
+.infocards
+    background-repeat: no-repeat
+    background-position: 100% 50%
+    background-size: contain
+    margin: 0 0 100px 0
+    &__content
+        display: flex
+        flex-wrap: wrap
 
 @media (max-width: 768px)
     .logical

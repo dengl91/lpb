@@ -35,7 +35,8 @@
     src: url("../fonts/StagSans-Bold.woff2") format("woff2")
     font-weight: 700
 
-
+html
+    scroll-behavior: smooth
 body
     font-family: 'Stag Sans', sans-serif
     font-size: var(--size)
@@ -81,6 +82,8 @@ textarea:focus
     width: 60%
 .col-70
     width: 70%
+.col-75
+    width: 75%
 .col-grow
     flex-grow: 1
 
@@ -232,7 +235,7 @@ section
             height: 600px
             background: url(../img/logo__blend.svg) no-repeat 50%
             position: absolute
-            top: 40px
+            top: 20px
             left: 50%
             transform: translateX(-80%)
 
@@ -554,3 +557,4 @@ footer
 @import layout/card
 @import layout/hint
 @import layout/grow
+@import layout/industries

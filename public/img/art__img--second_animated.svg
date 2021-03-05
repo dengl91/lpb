@@ -1,0 +1,13 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<svg width="581px" height="386px" viewBox="0 0 581 386" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="">
+    <title>Figure</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Figure" transform="translate(1.000000, 0.000000)" stroke="#313131">
+            <path id="4" d="M138.5,6A5.5,5.5 0,1,1 149.5,6A5.5,5.5 0,1,1 138.5,6" class="HkAJakgd_0"></path>
+            <path d="M138.361,6 L20,6 C8.9543,6 0,14.9543 0,26 L0,161.5 C0,172.546 8.95431,181.5 20,181.5 L267,181.5 C278.046,181.5 287,172.546 287,161.5 L287,119" id="1" class="HkAJakgd_1"></path>
+            <path d="M574,162 L574,26 C574,14.9543 565.045,6 554,6 L307.276,6 C296.23,6 287.276,14.9543 287.276,26 L287.276,128 L287.146048,153.466842 C287.067139,168.930614 299.539035,181.530446 315.002807,181.609354 C315.013974,181.609411 315.025141,181.609461 315.036309,181.609505 L415.003,182 L415.003,182" id="2" transform="translate(430.501500, 94.000000) scale(-1, 1) translate(-430.501500, -94.000000) " class="HkAJakgd_2"></path>
+            <path d="M446,182 L307,182 C295.954,182 287,190.954 287,202 L287,365.5 C287,376.546 295.954,385.5 307,385.5 L553.724,385.5 C564.77,385.5 573.724,376.546 573.724,365.5 L573.724,269.5" id="3" class="HkAJakgd_3"></path>
+            <path id="5" opacity="0.5" d="M568.5,264A5.5,5.5 0,1,1 579.5,264A5.5,5.5 0,1,1 568.5,264" class="HkAJakgd_4"></path>
+        </g>
+    </g>
+<style data-made-with="vivus-instant">.HkAJakgd_0{stroke-dasharray:35 37;stroke-dashoffset:36;animation:HkAJakgd_draw 66ms linear 0ms forwards;}.HkAJakgd_1{stroke-dasharray:638 640;stroke-dashoffset:639;animation:HkAJakgd_draw 1177ms linear 66ms forwards;}.HkAJakgd_2{stroke-dasharray:718 720;stroke-dashoffset:719;animation:HkAJakgd_draw 1324ms linear 1243ms forwards;}.HkAJakgd_3{stroke-dasharray:740 742;stroke-dashoffset:741;animation:HkAJakgd_draw 1365ms linear 2568ms forwards;}.HkAJakgd_4{stroke-dasharray:35 37;stroke-dashoffset:36;animation:HkAJakgd_draw 66ms linear 3933ms forwards;}@keyframes HkAJakgd_draw{100%{stroke-dashoffset:0;}}@keyframes HkAJakgd_fade{0%{stroke-opacity:1;}95.1219512195122%{stroke-opacity:1;}100%{stroke-opacity:0;}}</style></svg>

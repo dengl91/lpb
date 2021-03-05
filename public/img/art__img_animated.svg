@@ -1,0 +1,13 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<svg width="581px" height="559px" viewBox="0 0 581 559" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="">
+    <title>art__img</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="art__img" transform="translate(1.000000, 0.000000)" stroke="#313131">
+            <path id="Oval" d="M138.5,6A5.5,5.5 0,1,1 149.5,6A5.5,5.5 0,1,1 138.5,6" class="euYQxzHw_0"></path>
+            <path d="M138.361,6 L20,6 C8.95431,6 0,14.9543 0,26 L0,262 C0,273.046 8.95431,282 20,282 L267,282 C278.046,282 287,273.046 287,262 L287,180.774" id="Path" class="euYQxzHw_1"></path>
+            <path d="M574,262 L574,26 C574,14.9543 565.045,6 554,6 L307.276,6 C296.23,6 287.276,14.9543 287.276,26 L287.276,194.5 L287.089277,253.912 C287.040676,269.375897 299.537242,281.951261 315.001139,281.999862 C315.030472,281.999954 315.059805,282 315.089138,282 L415.001,282 L415.001,282" id="Path" transform="translate(430.500500, 144.000000) scale(-1, 1) translate(-430.500500, -144.000000) " class="euYQxzHw_2"></path>
+            <path d="M446,282 L307,282 C295.954,282 287,290.954 287,302 L287,538 C287,549.046 295.954,558 307,558 L553.724,558 C564.77,558 573.724,549.046 573.724,538 L573.724,369.5" id="Path" class="euYQxzHw_3"></path>
+            <path id="Oval" d="M568.5,365A5.5,5.5 0,1,1 579.5,365A5.5,5.5 0,1,1 568.5,365" class="euYQxzHw_4"></path>
+        </g>
+    </g>
+<style data-made-with="vivus-instant">.euYQxzHw_0{stroke-dasharray:35 37;stroke-dashoffset:36;animation:euYQxzHw_draw 54ms linear 0ms forwards;}.euYQxzHw_1{stroke-dasharray:777 779;stroke-dashoffset:778;animation:euYQxzHw_draw 1172ms linear 54ms forwards;}.euYQxzHw_2{stroke-dasharray:918 920;stroke-dashoffset:919;animation:euYQxzHw_draw 1384ms linear 1226ms forwards;}.euYQxzHw_3{stroke-dasharray:885 887;stroke-dashoffset:886;animation:euYQxzHw_draw 1334ms linear 2610ms forwards;}.euYQxzHw_4{stroke-dasharray:35 37;stroke-dashoffset:36;animation:euYQxzHw_draw 54ms linear 3945ms forwards;}@keyframes euYQxzHw_draw{100%{stroke-dashoffset:0;}}@keyframes euYQxzHw_fade{0%{stroke-opacity:1;}95.1219512195122%{stroke-opacity:1;}100%{stroke-opacity:0;}}</style></svg>

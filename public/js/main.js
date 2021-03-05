@@ -79,7 +79,7 @@
             e.siblings('.tabs-nav__line').css('width',  + (window_width - container_width) / 2 + Math.round(line_width));
         }
 
-        $('.tabs-nav__item').on('click', function() {
+        $('span.tabs-nav__item').on('click', function() {
             $(this).addClass('active').siblings().removeClass('active');
             let index = $(this).index();
             $('.tabs__content').hide();
@@ -191,7 +191,7 @@
             var $window = $(window)
             var viewport_top = $window.scrollTop()
             var viewport_height = $window.height()
-            var viewport_bottom = ( viewport_top + viewport_height ) * 1.1
+            var viewport_bottom = ( viewport_top + viewport_height )
             var $elem = $(elem)
             var top = $elem.offset().top
             var height = $elem.height()
