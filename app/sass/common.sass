@@ -58,7 +58,6 @@ textarea:focus
 
 .row
     display: flex
-    margin: 0 -10px
 .d-flex
     display: flex
 .flex-wrap
@@ -523,9 +522,15 @@ footer
         &__middle
             flex-wrap: wrap
         &__row
-            display: none
+            flex: 0 0 100%
+            padding: 40px 0 0 0
+            &.sep
+                display: none
             &:last-child
                 display: flex
+        &__title
+            &:last-child
+                margin: 0
         &__copyright
             flex-direction: column-reverse
         &__privacy-link

@@ -27,3 +27,14 @@
             top: 42px
             left: 50%
             transform: translateX(-50%)
+
+@media (max-width: 768px)
+    .industries
+        margin: 0
+        &__item
+            border: none
+            border-top: 1px solid var(--stroke)
+            padding: 20px 0
+            &:last-child
+                border-right: none
+                border-bottom: 1px solid var(--stroke)
