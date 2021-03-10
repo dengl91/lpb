@@ -12,6 +12,7 @@
             slidesToShow: 5,
             slidesToScroll: 2,
             dots: true,
+            autoplay: true,
             responsive: [
                 {
                     breakpoint: 768,
@@ -47,6 +48,20 @@
             dots: true
         });
 
+        $('.search input[type=text]').val('');
+
+        $('.search input[type=submit]').on('click', function(e) {
+            if ( !$(this).siblings('input').val() ) {
+                e.preventDefault();
+                $(this).siblings('input').toggleClass('active');
+            }
+        });
+
+        $('body').on('click', function(e) {
+            if ( $(e.target).closest('.search').length ) return;
+            $('.search input').removeClass('active');
+        });
+
         $('[data-bg]').each(function() {
             let bg_img = $(this).data('bg');
             $(this).css('background-image', 'url(' + bg_img + ')');
@@ -55,8 +70,6 @@
         $('.topmenu__menu-btn, .header__menu-btn').on('click', function() {
             $(this).toggleClass('active');
         });
-
-        // tabs
 
         $('.tabs-nav__item.active').each(function() {
             tabs_line($(this));
@@ -79,32 +92,6 @@
             e.siblings('.tabs-nav__line').css('width',  + (window_width - container_width) / 2 + Math.round(line_width));
         }
 
-        $('span.tabs-nav__item').on('click', function() {
-            $(this).addClass('active').siblings().removeClass('active');
-            let index = $(this).index();
-            $('.tabs__content').hide();
-            $('.tabs__content').eq(index).show();
-        });
-
-        // modal
-
-        $('.modal__close, .modal__blur').on('click', function(e) {
-            if ( e.target == e ) return;
-            $(this).closest('.modal').removeClass('active');
-        });
-
-        $('.staff__item').on('click', function() {
-            $('.modal--staff').addClass('active');
-            let staff_img         = $(this).find('img').attr('src');
-            let staff_title       = $(this).find('.staff__title').text();
-            let staff_position    = $(this).find('.staff__position').text();
-            let staff_description = $(this).find('.staff__description').text();
-            $('.modal--staff').find('img').attr('src', staff_img);
-            $('.modal--staff').find('.common-title').text(staff_title);
-            $('.modal--staff').find('.staff__position').text(staff_position);
-            $('.modal--staff').find('.staff__description').text(staff_description);
-        });
-
         // Counter
 
         $(window).scroll( function() {
@@ -112,13 +99,6 @@
                 let target = $(this);
                 if ( isOnScreen(target) && !target.hasClass('counted') ) {
                     countUp(target);
-                    target.addClass('counted');
-                }
-            });
-            $('[data-width]').each(function () {
-                let target = $(this);
-                if ( isOnScreen(target) && !target.hasClass('counted') ) {
-                    setWidth(target);
                     target.addClass('counted');
                 }
             });
@@ -137,11 +117,6 @@
             } else {
                 return;
             }
-        }
-
-        function setWidth(target) {
-            let width = target.data('width');
-            target.css('width', width + '%');
         }
 
         $('.timeline__row--title').on('click', function() {
@@ -191,7 +166,7 @@
             var $window = $(window)
             var viewport_top = $window.scrollTop()
             var viewport_height = $window.height()
-            var viewport_bottom = ( viewport_top + viewport_height )
+            var viewport_bottom = ( viewport_top + viewport_height ) * 1.1
             var $elem = $(elem)
             var top = $elem.offset().top
             var height = $elem.height()
