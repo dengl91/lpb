@@ -13,8 +13,10 @@
     --size: 14px
     --stroke: #e3e3e3
     --gray: #817F7F
+    --gray__light: #f8f8f8
     --yellow: #FCD60D
     --yellow__blend: #FCD60D80
+    --yellow__dark: #CAAC0E
     --blue__blend: #548cde80
     --brown: #CAAC0E
     --orange: #F4C82D
@@ -43,6 +45,9 @@ body
     color: var(--text)
     padding: 0
     margin: 0
+    &.unscroll
+        overflow: hidden
+        padding: 0 15px 0 0
 
 a
     color: inherit
@@ -455,6 +460,9 @@ footer
     display: none
 
 @media screen and (max-width: 768px)
+    body
+        &.unscroll
+            padding: 0
 
     .only-xs
         display: block

@@ -48,6 +48,8 @@
             dots: true
         });
 
+        // Search
+
         $('.search input[type=text]').val('');
 
         $('.search input[type=submit]').on('click', function(e) {
@@ -62,14 +64,40 @@
             $('.search input').removeClass('active');
         });
 
+        // data-events
+
         $('[data-bg]').each(function() {
             let bg_img = $(this).data('bg');
             $(this).css('background-image', 'url(' + bg_img + ')');
         });
-        
-        $('.topmenu__menu-btn, .header__menu-btn').on('click', function() {
+
+        $('[data-click]').on('click', function() {
             $(this).toggleClass('active');
         });
+
+        // Menu
+        
+        $('.menu-btn').on('click', function() {
+            $('.menu-btn, .menu').toggleClass('active');
+            $('body').toggleClass('unscroll');
+        });
+
+        $('.menu').on('click', function(e) {
+            if ( e.target !== this ) return;
+            $('.menu-btn, .menu').removeClass('active');
+            $('body').removeClass('unscroll');
+        });
+
+        // Global keypress
+
+        $(document).keyup(function(e) {
+            if ( e.key === "Escape" ) {
+                $('.menu-btn, .menu, .modal, .search input').removeClass('active');
+                $('body').removeClass('unscroll');
+            }
+        });
+
+        // Tabs
 
         $('.tabs-nav__item.active').each(function() {
             tabs_line($(this));
@@ -91,6 +119,25 @@
             let container_width = $('.container').width();
             e.siblings('.tabs-nav__line').css('width',  + (window_width - container_width) / 2 + Math.round(line_width));
         }
+
+        // Modal
+
+        $('.modal__close, .modal__blur').on('click', function(e) {
+            if ( e.target == e ) return;
+            $(this).closest('.modal').removeClass('active');
+        });
+
+        $('.staff__item').on('click', function() {
+            $('.modal--staff').addClass('active');
+            let staff_img         = $(this).find('img').attr('src');
+            let staff_title       = $(this).find('.staff__title').text();
+            let staff_position    = $(this).find('.staff__position').text();
+            let staff_description = $(this).find('.staff__description').text();
+            $('.modal--staff').find('img').attr('src', staff_img);
+            $('.modal--staff').find('.common-title').text(staff_title);
+            $('.modal--staff').find('.staff__position').text(staff_position);
+            $('.modal--staff').find('.staff__description').text(staff_description);
+        });
 
         // Counter
 
@@ -119,16 +166,13 @@
             }
         }
 
+        // Timeline
+
         $('.timeline__row--title').on('click', function() {
             $(this).closest('.timeline__item').toggleClass('active');
         });
 
-        $('.popup-form-content').mousedown( function(e) {
-            if (e.target !== this)
-                return;
-            
-            $(this).removeClass('active');
-        });
+        // Animation
 
         let keywords = {
             ac: "active",
