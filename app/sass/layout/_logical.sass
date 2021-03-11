@@ -100,19 +100,6 @@
     &.active
         background: url(../img/art__img_animated.svg) no-repeat 50%
         background-size: contain
-    &--second
-        // background: url(../img/art__img--second.svg) no-repeat 50%
-        // background-size: contain
-        &.active
-            // background: url(../img/art__img--second_animated.svg) no-repeat 50%
-            // background-size: contain
-        .art-img
-            &__item
-                // width: 50%
-                // height: 190px
-                // display: flex
-                // align-items: center
-                // padding: 20px 40px 0
 
 .infocards
     background-repeat: no-repeat
@@ -148,6 +135,7 @@
     .art-img
         background: url(../img/art__img--mobile.svg) no-repeat 50% 0
         background-size: contain
+        flex-direction: column
         padding: 10px 0 0 0
         &.active
             background: url(../img/art__img--mobile.svg) no-repeat 50% 0
@@ -163,3 +151,10 @@
     .infocards
         background: none !important
         margin: 0 0 40px 0
+
+@media (max-width: 1170px) and (min-width: 768px)
+    @-moz-document url-prefix()
+        .art-img
+            &__item
+                width: 50%
+                height: 24vw

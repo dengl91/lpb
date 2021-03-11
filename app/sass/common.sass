@@ -459,6 +459,14 @@ footer
 .only-xs
     display: none
 
+@media (max-width: 1170px) and (min-width: 900px)
+    body
+        zoom: 0.8
+
+@media (max-width: 900px) and (min-width: 768px)
+    body
+        zoom: 0.6
+
 @media screen and (max-width: 768px)
     body
         &.unscroll
@@ -552,6 +560,7 @@ footer
         &__content
             height: 100vh
             overflow: auto
+
 
 @import layout/header
 @import layout/banner
