@@ -15,18 +15,18 @@
 	<div class="topbar">
 		<div class="container">
 			<div class="toplink">
-				<a href="/" class="toplink__item">Uzņēmumiem</a>
+				<a href="/" class="toplink__item active">Uzņēmumiem</a>
 				<a href="/" class="toplink__item">Finteks</a>
-				<a href="/" class="toplink__item">E-komercija</a>
+				<a href="/lpb/e-commerce.html" class="toplink__item">E-komercija</a>
 				<span class="toplink__line"></span>
 			</div>
 			<div class="topmenu row">
 				<a href="/" class="topmenu__link">Par banku</a>
 				<a href="/" class="topmenu__link">Izvēlne</a>
-				<div class="topmenu__menu-btn">
-					<div class="topmenu__menu-btn__item"></div>
-					<div class="topmenu__menu-btn__item"></div>
-					<div class="topmenu__menu-btn__item"></div>
+				<div class="menu-btn">
+					<div class="menu-btn__item"></div>
+					<div class="menu-btn__item"></div>
+					<div class="menu-btn__item"></div>
 				</div>
 			</div>
 		</div>
@@ -38,17 +38,146 @@
     	        <img src="public/img/logo.svg">
     	    </a>
     	    <div class="header__nav">
-				<a href="/" class="header__nav__link search"></a>
-				<a href="/" class="header__nav__link language">English</a>
+				<span class="header__nav__link search">
+					<form action="/">
+						<input type="text" name="s" placeholder="Type something to search...">
+						<input type="submit" value="">
+					</form>
+				</span>
+				<div class="header__nav__languages">
+					<a href="/" class="language">Latvian</a>
+					<a href="/" class="language">English</a>
+					<a href="/" class="language">Russian</a>
+				</div>
 				<a href="/" class="header__nav__link e-banking">e-banking</a>
 			</div>
-    	    <div class="header__menu-btn">
-    	        <div class="header__menu-btn__item"></div>
-    	        <div class="header__menu-btn__item"></div>
-    	        <div class="header__menu-btn__item"></div>
+    	    <div class="menu-btn">
+    	        <div class="menu-btn__item"></div>
+    	        <div class="menu-btn__item"></div>
+    	        <div class="menu-btn__item"></div>
     	    </div>
 		</div>
 	</header>
+
+	<div class="menu">
+		<div class="container">
+			<div class="menu__header">
+				<img src="public/img/logo.svg" class="menu__logo">
+				<a href="tel:+37167000000" class="menu__phone"><span>Diennakts tehniskais atbalsts</span> (+371) 670 000 00</a>
+				<a href="tel:+37167000001" class="menu__phone"><span>Tālrunis uzziņām</span>(+371) 670 000 01</a>
+				<div class="menu-btn">
+					<div class="menu-btn__item"></div>
+					<div class="menu-btn__item"></div>
+					<div class="menu-btn__item"></div>
+				</div>
+			</div>
+			<div class="menu__row">
+				<div class="menu__col">
+					<a href="/" class="menu__big-btn">E-komercija</a>
+					<a href="/" class="menu__big-btn menu__big-btn--dark">Finteks</a>
+				</div>
+				<div class="menu__col">
+					<div class="menu__items menu__items--gray">
+						<div class="menu__title">Uzņēmējiem</div>
+						<div class="menu__item menu__item--has-child" data-click="active">
+							Bankas pakalpojumi
+							<div class="menu__sub-items">
+								<div class="menu__sub-item">Bankas pakalpojumi</div>
+								<div class="menu__sub-item">Bankas pakalpojumi</div>
+								<div class="menu__sub-item">Bankas pakalpojumi</div>
+								<div class="menu__sub-item">Bankas pakalpojumi</div>
+							</div>
+						</div>
+						<a href="/" class="menu__item">Noguldījumi</a>
+						<div class="menu__item menu__item--has-child" data-click="active">
+							Investīcijas
+							<div class="menu__sub-items">
+								<div class="menu__sub-item">Investīcijas</div>
+								<div class="menu__sub-item">Investīcijas</div>
+								<div class="menu__sub-item">Investīcijas</div>
+								<div class="menu__sub-item">Investīcijas</div>
+							</div>
+						</div>
+						<a href="/" class="menu__item">Seifi</a>
+						<a href="/" class="menu__item">POS termināļi</a>
+						<a href="/" class="menu__item">Maksājumu kartes</a>
+						<a href="/" class="menu__item">Uzņēmumu finansēšana</a>
+						<a href="/" class="menu__item">E-komercija</a>
+					</div>
+				</div>
+				<div class="menu__col">
+					<div class="menu__items">
+						<div class="menu__title">Par mums</div>
+						<a href="/" class="menu__item">Par banku</a>
+						<a href="/" class="menu__item">Vadība un akcionāri</a>
+						<a href="/" class="menu__item">Skaitļi un fakti</a>
+						<a href="/" class="menu__item">Mūsu vēsture</a>
+						<div class="menu__item menu__item--has-child" data-click="active">
+							Karjera bankā
+							<div class="menu__sub-items">
+								<div class="menu__sub-item">Karjera bankā</div>
+								<div class="menu__sub-item">Karjera bankā</div>
+								<div class="menu__sub-item">Karjera bankā</div>
+								<div class="menu__sub-item">Karjera bankā</div>
+							</div>
+						</div>
+						<a href="/" class="menu__item">Labdarības projekti</a>
+						<a href="/" class="menu__item">Kontakti un rekvizīti</a>
+					</div>
+				</div>
+				<div class="menu__col">
+					<a href="/" class="menu__icon-btn">
+						<img src="public/img/currency-alt.svg">
+						Valūtu kursi
+					</a>
+					<a href="/" class="menu__icon-btn">
+						<img src="public/img/coop.svg">
+						Sadarbība
+					</a>
+					<a href="/" class="menu__icon-btn">
+						<img src="public/img/loyalty.svg">
+						Lojalitātes programma
+					</a>
+					<a href="/" class="menu__icon-btn">
+						<img src="public/img/news.svg">
+						Mēdijiem
+					</a>
+				</div>
+			</div>
+			<div class="menu__row">
+				<div class="menu__col">
+					<div class="menu__card">
+						<div class="menu__subtitle">Noteukimi</div>
+						<a href="/" class="menu__link">Līgumu noteikumi</a>
+						<a href="/" class="menu__link">Darbību regulējošie noteikumi</a>
+						<a href="/" class="menu__link">Politikas</a>
+						<a href="/" class="menu__link">Mājas lapas lietošanas noteikumi</a>
+						<a href="/" class="menu__link">Sīkdatņu izmantošana</a>
+					</div>
+				</div>
+				<div class="menu__col">
+					<div class="menu__card">
+						<div class="menu__subtitle">Jaunumi</div>
+						<a href="/" class="menu__link">Bankas jaunumi un aktualitātes</a>
+					</div>
+				</div>
+				<div class="menu__col">
+					<div class="menu__card">
+						<div class="menu__subtitle">Cenrādis</div>
+						<a href="/" class="menu__link">Privātpersonām</a>
+						<a href="/" class="menu__link">Juridiskām personām</a>
+					</div>
+				</div>
+				<div class="menu__col">
+					<div class="menu__card">
+						<div class="menu__subtitle">Dokumenti</div>
+						<a href="/" class="menu__link">Privātpersonām</a>
+						<a href="/" class="menu__link">Juridiskām personām</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<section class="banner" data-bg="public/img/career-options__bg.jpg">
 		<div class="container">
