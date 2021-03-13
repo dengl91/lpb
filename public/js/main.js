@@ -139,6 +139,13 @@
             $('.modal--staff').find('.staff__description').text(staff_description);
         });
 
+        $('.popup-form-content').mousedown( function(e) {
+            if (e.target !== this)
+                return;
+            
+            $(this).removeClass('active');
+        });
+
         // Counter
 
         $(window).scroll( function() {
@@ -146,6 +153,13 @@
                 let target = $(this);
                 if ( isOnScreen(target) && !target.hasClass('counted') ) {
                     countUp(target);
+                    target.addClass('counted');
+                }
+            });
+            $('[data-width]').each(function () {
+                let target = $(this);
+                if ( isOnScreen(target) && !target.hasClass('counted') ) {
+                    setWidth(target);
                     target.addClass('counted');
                 }
             });
@@ -164,6 +178,11 @@
             } else {
                 return;
             }
+        }
+
+        function setWidth(target) {
+            let width = target.data('width');
+            target.css('width', width + '%');
         }
 
         // Timeline
