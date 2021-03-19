@@ -148,7 +148,7 @@ textarea:focus {
   font-weight: 600;
   line-height: 60px;
   background: url(../img/arrow-right.svg) no-repeat top 50% right 20px #fff;
-  box-shadow: 0 0 0 1px var(--text) inset;
+  box-shadow: 0 0 0 1px var(--stroke) inset;
   padding: 0 30px;
   margin: 0 0 20px 0;
   display: block;
