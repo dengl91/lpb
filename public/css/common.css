@@ -811,6 +811,18 @@ footer::after {
     height: 100vh;
     overflow: auto;
   }
+  .modal__header {
+    flex-direction: column;
+  }
+  .modal__languages {
+    margin: 20px auto 0 auto;
+  }
+  .modal__foter {
+    flex-direction: column;
+  }
+  .modal__foter .learn-more {
+    margin: 0 0 20px 0;
+  }
 
   .cookie {
     width: 100%;
