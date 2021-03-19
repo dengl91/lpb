@@ -110,12 +110,14 @@ textarea:focus
     font-weight: 600
     line-height: 60px
     background: url(../img/arrow-right.svg) no-repeat top 50% right 20px #fff
+    box-shadow: 0 0 0 1px var(--text) inset
     padding: 0 30px
     margin: 0 0 20px 0
     display: block
     transition: background 0.4s
     &:hover, &.active
         color: #fff
+        box-shadow: none
         background: url(../img/arrow-right-w.svg) no-repeat top 50% right 20px, linear-gradient(90deg, #4E89E2 0%, #FCD60D 100%)
     &.active
         &:hover
@@ -360,6 +362,38 @@ footer
         position: relative
         z-index: 1
         animation: flowIn 0.6s forwards
+        &--cookie
+            background: #fff
+            padding: 30px
+    &__header
+        color: var(--gray)
+        display: flex
+        align-items: center
+        border-bottom: 1px solid var(--stroke)
+        padding: 0 0 30px 0
+        margin: 0 0 30px 0
+    &__title
+        font-size: 18px
+        color: var(--text)
+        font-weight: 600
+        margin: 0 10px 0 0
+    &__text
+        color: var(--gray)
+        line-height: 20px
+        a
+            text-decoration: underline
+    &__languages
+        margin: 0 0 0 auto
+        a
+            margin: 0 10px
+    &__foter
+        border-top: 1px solid var(--stroke)
+        display: flex
+        justify-content: flex-end
+        padding: 24px 0 0 0
+        margin: 10px 0 0 0
+        .learn-more
+            margin: 0 0 0 20px
     &__close
         width: 32px
         height: 32px
@@ -381,6 +415,27 @@ footer
         -webkit-backdrop-filter: blur(10px)
     &.active
         display: flex
+
+/* input */
+
+.checkbox
+    font-weight: 600
+    line-height: 24px
+    text-decoration: underline
+    display: flex
+    align-items: center
+    margin: 0 0 24px 0
+    cursor: pointer
+    input
+        width: 24px
+        height: 24px
+        border: 1px solid var(--text)
+        border-radius: 0
+        margin: 0 24px 0 0
+        appearance: none
+        -webkit-appearance: none
+        &:checked
+            background: url(../img/check.svg) no-repeat 50%
 
 @keyframes flowIn
     0%
@@ -453,6 +508,44 @@ footer
             border: none
 .wpml-ls-display
     display: none !important
+
+.cookie
+    width: 100%
+    max-width: 380px
+    background: #fff
+    box-shadow: 0 0 1px 1px var(--stroke)
+    padding: 40px
+    position: fixed
+    left: 40px
+    bottom: 40px
+    z-index: 1
+    &__text
+        max-width: 280px
+        color: var(--gray)
+        line-height: 20px
+        margin: 0 0 20px 0
+    &__btn
+        width: 260px
+        color: #fff
+        font-weight: 600
+        line-height: 60px
+        background: url(../img/arrow-right-w.svg) no-repeat top 50% right 20px, linear-gradient(90deg, #4E89E2 0%, #FCD60D 100%)
+        padding: 0 30px
+        display: block
+        cursor: pointer
+        transition: background 0.4s
+        &:hover
+            color: var(--text)
+            background: url(../img/arrow-right.svg) no-repeat top 50% right 20px #fff
+            box-shadow: 0 0 0 1px var(--text) inset
+    &__close
+        width: 24px
+        height: 24px
+        background: url(../img/modal__close.svg) no-repeat 50%
+        position: absolute
+        top: 20px
+        right: 20px
+        cursor: pointer
 
 .menu-btn
     display: none
@@ -560,6 +653,11 @@ footer
         &__content
             height: 100vh
             overflow: auto
+
+    .cookie
+        width: 100%
+        left: 0
+        bottom: 0
 
 
 @import layout/header

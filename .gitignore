@@ -2,5 +2,6 @@
 
 .vscode
 .DS_Store
+/content
 /plugins
 /wp-content

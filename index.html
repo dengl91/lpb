@@ -397,6 +397,53 @@
 		</div>
 	</section>
 
+	<div class="cookie animate__animated animate__fadeInUp">
+		<div class="cookie__text">Mēs izmantojam sīkdatnes, lai nodrošinātu mājas lapas optimālu funkcionalitāti. Noklikšķinot uz pogas "Piekrītu", jūs piekrītat mūsu privātuma politikai.</div>
+		<div class="cookie__btn">Piekrītu</div>
+		<div class="cookie__close"></div>
+	</div>
+
+	<div class="modal modal--cookie">
+        <div class="modal__content modal__content--cookie">
+			<div class="modal__header">
+				<div class="modal__title">Izmantojamās sīkdatnes</div>
+				<div class="modal__text">Skat detalizētāk <a href="/">šeit</a>.</div>
+				<div class="modal__languages">
+					<a href="/">LV</a>
+					<a href="/">RU</a>
+					<a href="/">EN</a>
+				</div>
+			</div>
+			<div class="d-flex">
+				<div class="col-30">
+					<label class="checkbox">
+						<input type="checkbox">
+						Funkcionālās sīkdatnes
+					</label>
+					<label class="checkbox">
+						<input type="checkbox">
+						Statistikas sīkdatnes
+					</label>
+					<label class="checkbox">
+						<input type="checkbox">
+						Mārketinga sīkdatnes
+					</label>
+				</div>
+				<div class="col-50">
+					<div class="modal__text">
+						<b>Funkcionālās sīkdatnes</b> palīdz padarīt tīmekļa vietni par izmantojamu, nodrošinot pamata funkcijas, piemēram, Jūsu izvēlēto valodu. Tīmekļa vietne bez šīm sīkdatnēm nevar pareizi funkcionēt.
+					</div>
+				</div>
+			</div>
+			<div class="modal__foter">
+				<div class="learn-more active">Atļaut visas sīkdatnes</div>
+				<div class="learn-more">Saglabāt iestatījumus</div>
+			</div>
+        </div>
+        <div class="modal__close modal__close--cookie"></div>
+        <div class="modal__blur"></div>
+    </div>
+
 	<footer>
 		<div class="container">
 			<div class="footer__first-row">
@@ -478,6 +525,9 @@
 	<script>
 		$( document ).ready(function() {
 			$('.banner').css('background-image', 'url(public/img/main-bg.jpg)');
+			setTimeout(() => {
+				$('.modal--cookie').addClass('active');
+			}, 3000);
 		});
 	</script>
     
