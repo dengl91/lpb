@@ -7,7 +7,16 @@
 
 .experts
     padding: 0 0 80px 0
-    overflow: hidden
+    &::after
+        content: ""
+        width: 400px
+        height: 1400px
+        background: url(../img/blured__bg.jpg) no-repeat 50%
+        background-size: contain
+        position: absolute
+        top: -100%
+        right: 0
+        z-index: -1
     .container
         position: relative
         &::after
@@ -74,6 +83,9 @@
 
 @media (max-width: 768px)
     .experts
+        overflow: hidden
+        &::after
+            display: none
         &__item
             flex-wrap: wrap
         &__title

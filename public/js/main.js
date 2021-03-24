@@ -3,8 +3,13 @@
 (function($) {
     $(document).ready(function() {
 
-        $('.banner__slider.main').on('init', function(event, slick){
-            slick.$slides.css('height', slick.$slideTrack.height() + 'px');
+        $('.slider').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: false,
+            autoplay: true
         });
 
         $('.banner__slider.main').slick({
@@ -12,7 +17,7 @@
             slidesToShow: 5,
             slidesToScroll: 2,
             dots: true,
-            autoplay: true,
+            autoplay: false,
             responsive: [
                 {
                     breakpoint: 768,
@@ -119,6 +124,19 @@
             let container_width = $('.container').width();
             e.siblings('.tabs-nav__line').css('width',  + (window_width - container_width) / 2 + Math.round(line_width));
         }
+
+        $('span.tabs-nav__item').on('click', function() {
+            $(this).addClass('active').siblings().removeClass('active');
+            let index = $(this).index();
+            $('.tabs__content').hide();
+            $('.tabs__content').eq(index).show();
+        });
+
+        // cookie
+
+        $('.cookie__btn, .cookie__close').on('click', function(e) {
+            $('.cookie').removeClass('active');
+        });
 
         // Modal
 

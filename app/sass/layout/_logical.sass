@@ -110,6 +110,31 @@
         display: flex
         flex-wrap: wrap
 
+.blured
+    &__bg
+        &::after
+            content: ''
+            width: 480px
+            height: 1352px
+            background: url(../img/blured__bg.jpg) no-repeat 50%
+            background-size: cover
+            position: absolute
+            right: 0
+            top: -50%
+            z-index: -1
+    &--left
+        overflow: visible
+        &::after
+            content: ''
+            width: 400px
+            height: 1400px
+            background: url(../img/blured__bg-left.jpg) no-repeat 50%
+            background-size: contain
+            position: absolute
+            top: -50%
+            left: 0
+            z-index: -1
+
 @media (max-width: 768px)
     .logical
         padding: 40px 0

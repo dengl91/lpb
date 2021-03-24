@@ -147,6 +147,7 @@ textarea:focus
 section
     position: relative
 .common
+    padding: 0 0 80px 0
     position: relative
     overflow: hidden
 .common-title
@@ -343,6 +344,31 @@ footer
             white-space: nowrap
             margin: 0 20px 0 60px
 
+.fixed
+    width: 60px
+    height: 60px
+    position: fixed
+    top: 40%
+    right: 40px
+    &--phone
+        background: url(../img/phone.svg) no-repeat 50% #fff
+    &--email
+        background: url(../img/email.svg) no-repeat 50% #fff
+        top: calc(40% + 80px)
+    &__value
+        font-weight: 600
+        line-height: 60px
+        white-space: nowrap
+        background: #fff
+        padding: 0 30px
+        display: block
+        position: absolute
+        right: 100%
+        transform: translateX(200%)
+        transition: 0.4s
+        :hover > &
+            transform: translateX(0)
+
 /* Modal */
 
 .modal
@@ -515,10 +541,13 @@ footer
     background: #fff
     box-shadow: 0 0 1px 1px var(--stroke)
     padding: 40px
+    display: none
     position: fixed
     left: 40px
     bottom: 40px
     z-index: 1
+    &.active
+        display: block
     &__text
         max-width: 280px
         color: var(--gray)
@@ -618,6 +647,9 @@ footer
                     height: 320px
                     background-size: contain
                     transform: translateX(-50%)
+
+    .fixed
+        right: 20px
 
     footer
         padding: 40px 0

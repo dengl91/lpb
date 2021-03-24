@@ -7,6 +7,7 @@
 
 .request
     padding: 40px 0 0 0
+    position: relative
     &__phone
         font-size: 18px
         font-weight: 600
@@ -66,15 +67,15 @@
                 color: var(--yellow)
                 text-decoration: underline
     &::after
-        content: ""
+        content: ''
         width: 480px
         height: 1352px
-        background: url(../img/blured__bg.png) no-repeat 50%
+        background: url(../img/blured__bg-left.jpg) no-repeat 50%
         background-size: cover
         position: absolute
-        right: 0
-        bottom: 0
-        z-index: -1
+        top: -50%
+        left: 0
+        z-index: -2
 
 @media (max-width: 768px)
     .request
