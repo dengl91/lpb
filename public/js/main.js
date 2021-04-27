@@ -53,6 +53,24 @@
             dots: true
         });
 
+        // logical
+
+        $('[data-active]').on('click', function() {
+            $(this).toggleClass('active');
+        });
+
+        $('[data-control]').on('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            let target = $(this).data('control');
+            $('.' + target).toggleClass('active');
+        });
+
+        $('[data-control-parent]').on('click', function() {
+            let parent = $(this).data('control-parent');
+            $(this).closest('.' + parent).toggleClass('active');
+        });
+
         // Search
 
         $('.search input[type=text]').val('');
@@ -139,6 +157,13 @@
         });
 
         // Modal
+
+        $('body').on('click', function(e) {
+            if ( $('.modal.active').length ) {
+                if ( $(e.target).closest('.modal').length ) return;
+                $('.modal').removeClass('active');
+            }
+        });
 
         $('.modal__close, .modal__blur').on('click', function(e) {
             if ( e.target == e ) return;

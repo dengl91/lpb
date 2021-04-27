@@ -1,0 +1,45 @@
+// 
+// Theme Name: New Clean Template
+// _faq.sass
+//
+// app/sass/layout/
+//
+
+.faq
+    &__content
+        width: 100%
+    &__item
+        max-height: 68px
+        border-bottom: 1px solid var(--stroke)
+        overflow: hidden
+        transition: 0.4s cubic-bezier(0, 1, 0, 1)
+        &.active
+            max-height: 200vh
+            transition: 0.4s ease-in
+    &__title
+        height: 68px
+        font-weight: 600
+        display: flex
+        align-items: center
+        position: relative
+        cursor: pointer
+        &::before
+            content: ''
+            width: 16px
+            height: 16px
+            background: url(../img/logical__line.svg) no-repeat 50%
+            position: absolute
+            right: 0
+        &::after
+            content: ''
+            width: 16px
+            height: 16px
+            background: url(../img/logical__line.svg) no-repeat 50%
+            position: absolute
+            right: 0
+            transform: rotate(90deg)
+            transition: 0.4s
+            .active > &
+                transform: rotate(0deg)
+    &__description
+        padding: 0 0 20px 0

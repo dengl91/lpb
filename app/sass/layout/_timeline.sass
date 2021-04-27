@@ -78,6 +78,9 @@
         align-self: center
         padding: 20px
         margin: 10px 0
+        [class*=--simple] &
+            padding-left: 64px
+            background: url(../img/check--alt.svg) no-repeat 30px 20px #fff
     &__toggle
         width: 60%
     &__minus
@@ -88,6 +91,18 @@
         display: block
         .active &
             display: none
+    &--simple
+        margin: 80px 0 0 0
+        &::after
+            display: none
+
+/* static conditions */
+
+.timeline--simple .timeline__row:first-child .timeline__path:before
+    height: 50%
+    top: 50%
+.timeline--simple .timeline__row:last-child .timeline__path:before
+    height: 50%
 
 @media (max-width: 768px)
     .timeline
