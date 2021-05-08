@@ -159,6 +159,17 @@ textarea:focus
         &:hover
             color: var(--text)
             box-shadow: 0 0 0 1px var(--text), 0 10px 20px -4px var(--blue__blend)
+    &.save
+        width: fit-content
+        width: -moz-fit-content
+        min-width: 260px
+        background: url(../img/save.svg) no-repeat top 50% right 20px
+        box-shadow: 0 0 0 1px var(--text)
+        padding: 0 60px 0 30px
+        transition: 0.4s
+        &:hover
+            color: var(--text)
+            box-shadow: 0 0 0 1px var(--text), 0 10px 20px -4px var(--blue__blend)
 .flex-col
     .learn-more
         margin: 0
@@ -168,7 +179,6 @@ section
 .common
     padding: 0 0 80px 0
     position: relative
-    overflow: hidden
 .common-title
     height: 130px
     font-size: 40px
@@ -191,6 +201,13 @@ section
         font-size: 18px
         color: var(--gray)
         margin: -60px 0 0 40px
+    &__hint
+        font-size: 14px
+        color: var(--yellow__dark)
+        font-weight: 400
+        position: absolute
+        top: 0
+        left: 24px
 .isolated
     padding: 100px 0
 
@@ -200,6 +217,11 @@ section
     color: var(--gray)
     line-height: 1.6
     margin: 0 0 40px 0
+    a
+        text-decoration: underline
+    strong
+        color: var(--text)
+        font-weight: 600
 
 .link
     color: var(--gray)
@@ -209,10 +231,37 @@ section
     &--pdf
         background: url(../img/pdf.svg) no-repeat 0 50%
         padding: 0 0 0 32px
+    &--email
+        background: url(../img/email.svg) no-repeat 0 50%
+        padding: 0 0 0 32px
     &--arrow
         line-height: 16px
         background: url(../img/arrow-right.svg) no-repeat 0 50%
         padding: 0 0 0 32px
+
+[class^=col]
+    img
+        margin: 0 0 20px 0
+    ul
+        list-style-type: none
+        padding: 0
+        margin: 20px 0
+        li
+            font-size: 18px
+            color: var(--gray)
+            background: url(../img/check--alt.svg) no-repeat 0 14px
+            padding: 10px 0 10px 32px
+        &.stroked
+            margin: 0 0 40px 0
+            li
+                font-size: 14px
+                background: url(../img/check--alt.svg) no-repeat 30px 18px
+                border: 1px solid var(--stroke)
+                padding: 20px 20px 20px 64px
+                margin: 0 0 15px 0
+
+.text__yellow   
+    color: var(--yellow__dark)
 
 .verified
     font-size: 20px
@@ -406,6 +455,7 @@ footer
     position: fixed
     top: 40%
     right: 40px
+    z-index: 1
     &--phone
         background: url(../img/phone.svg) no-repeat 50% #fff
     &--email
@@ -782,3 +832,5 @@ footer
 @import layout/debit-card
 @import layout/feature
 @import layout/faq
+@import layout/kind
+@import layout/share
