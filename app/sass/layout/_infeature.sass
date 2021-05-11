@@ -18,6 +18,11 @@
         right: 0
         bottom: -50%
         z-index: -1
+    &__content
+        display: flex
+        overflow: auto
+        &::-webkit-scrollbar
+            display: none
     &__item
         text-align: center
         border: 1px solid var(--stroke)
@@ -32,11 +37,18 @@
             svg
                 path
                     fill: #fff !important
+            img
+                filter: brightness(10)
             [class*=title]
                 color: #fff
     &__img
         svg
             height: 64px
+        img
+            width: 64px
+            height: 64px
+            object-fit: contain
+            margin: 0
     &__title
         font-size: 20px
         font-weight: 600

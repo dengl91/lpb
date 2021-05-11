@@ -7,22 +7,30 @@
 
 .kind
     display: flex
-    margin: 0 0 30px 0
+    flex-wrap: wrap
+    margin: 10px 0 30px 0
     &__item
         width: calc(50% - 10px)
         color: var(--gray)
         border: 1px solid var(--stroke)
         display: flex
-        align-items: center
-        justify-content: center
         padding: 30px
+        margin: 10px 0
         &:first-child
-            margin: 0 20px 0 0
+            margin-right: 20px
+        &:nth-child(3)
+            margin-right: 20px
     &__img
-        width: 42px
-        height: 42px
-        margin: 0 40px 0 0
+        width: 64px
+        height: 52px
+        flex: 0 0 64px
+        margin: 0 20px 0 0
         img
-            width: 100%
+            width: auto
             height: 100%
-            object-fit: contain
+    &__description
+        display: flex
+        flex-direction: column
+        justify-content: center
+        &.jcfs
+            justify-content: flex-start

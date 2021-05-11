@@ -95,6 +95,8 @@ textarea:focus
 .col-grow
     flex-grow: 1
 
+.ml-auto
+    margin-left: auto
 .mb-4
     padding-bottom: 4rem
 
@@ -170,6 +172,17 @@ textarea:focus
         &:hover
             color: var(--text)
             box-shadow: 0 0 0 1px var(--text), 0 10px 20px -4px var(--blue__blend)
+    &.expand
+        width: fit-content
+        width: -moz-fit-content
+        min-width: 260px
+        background: url(../img/expand.svg) no-repeat top 50% right 20px
+        box-shadow: 0 0 0 1px var(--text)
+        padding: 0 60px 0 30px
+        transition: 0.4s
+        &:hover
+            color: var(--text)
+            box-shadow: 0 0 0 1px var(--text), 0 10px 20px -4px var(--blue__blend)
 .flex-col
     .learn-more
         margin: 0
@@ -177,7 +190,7 @@ textarea:focus
 section
     position: relative
 .common
-    padding: 0 0 80px 0
+    margin: 80px 0
     position: relative
 .common-title
     height: 130px
@@ -211,6 +224,12 @@ section
 .isolated
     padding: 100px 0
 
+.text
+    max-width: 90%
+    font-size: 18px
+    line-height: 1.6
+    margin: 0 0 40px 0
+
 .description
     max-width: 90%
     font-size: 18px
@@ -239,8 +258,15 @@ section
         background: url(../img/arrow-right.svg) no-repeat 0 50%
         padding: 0 0 0 32px
 
+.bordered
+    line-height: 40px
+    border: 1px solid var(--stroke)
+    padding: 0 15px
+    margin: 0 8px 8px 0
+
 [class^=col]
     img
+        max-width: 100%
         margin: 0 0 20px 0
     ul
         list-style-type: none
@@ -251,6 +277,8 @@ section
             color: var(--gray)
             background: url(../img/check--alt.svg) no-repeat 0 14px
             padding: 10px 0 10px 32px
+            a
+                text-decoration: underline
         &.stroked
             margin: 0 0 40px 0
             li
@@ -526,6 +554,9 @@ footer
         margin: 10px 0 0 0
         .learn-more
             margin: 0 0 0 20px
+    &__hint
+        color: var(--gray)
+        margin: 30px 0
     &__close
         width: 32px
         height: 32px
@@ -725,7 +756,6 @@ footer
 
     .learn-more
         &.pdf
-            width: 100%
             line-height: normal
             padding: 20px 60px 20px 30px
     
@@ -834,3 +864,4 @@ footer
 @import layout/faq
 @import layout/kind
 @import layout/share
+@import layout/table
