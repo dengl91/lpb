@@ -1,0 +1,31 @@
+// 
+// Theme Name: New Clean Template
+// _infoline.sass
+//
+// app/sass/layout/
+//
+
+.infoline
+    display: flex
+    align-items: center
+    margin: 0 0 24px 0
+    &__img
+        width: 32px
+        height: 32px
+        background-repeat: no-repeat
+        background-position: 0 50%
+        background-size: contain
+        margin: 0 24px 0 0
+        .wallet &
+            background-image: url(../img/wallet.svg)
+        .pen &
+            background-image: url(../img/pen.svg)
+        .check &
+            background-image: url(../img/page.svg)
+        .search &
+            background-image: url(../img/page-search.svg)
+    &__text
+        color: var(--gray)
+        a
+            color: var(--yellow__dark)
+            text-decoration: underline

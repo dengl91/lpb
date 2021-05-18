@@ -101,6 +101,36 @@ section
     &__img
         margin: 20px 0
 
+.question
+    &__item
+        max-height: 60px
+        border: 1px solid var(--stroke)
+        padding: 0 24px
+        margin: 0 0 15px 0
+        overflow: hidden
+        transition: cubic-bezier(0, 1, 0, 1) 0.4s
+        &.active
+            max-height: 400px
+            transition: ease-in 0.4s
+    &__title
+        height: 58px
+        display: flex
+        align-items: center
+        position: relative
+        cursor: pointer
+        &::after
+            content: ''
+            width: 24px
+            height: 24px
+            background: url(../img/dropdown.svg) no-repeat 50%
+            position: absolute
+            top: 15px
+            right: 10px
+    &__answer
+        color: var(--gray)
+        font-style: italic
+        padding: 0 0 24px 0
+
 .bubble
     &--right
         &::after
@@ -111,7 +141,7 @@ section
             background-size: cover
             position: absolute
             right: 0
-            bottom: -50%
+            bottom: 0
             z-index: -2
     &--left
         &::after

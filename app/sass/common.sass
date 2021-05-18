@@ -242,6 +242,10 @@ section
         color: var(--text)
         font-weight: 600
 
+strong
+    font-size: 18px
+    font-weight: 600
+
 .link
     color: var(--gray)
     text-decoration: underline
@@ -286,7 +290,9 @@ section
                 background: url(../img/check--alt.svg) no-repeat 30px 18px
                 border: 1px solid var(--stroke)
                 padding: 20px 20px 20px 64px
-                margin: 0 0 15px 0
+                margin: 0 20px 15px 0
+                &.last
+                    background: url(../img/more.svg) no-repeat 30px 26px
 
 .text__yellow   
     color: var(--yellow__dark)
@@ -865,3 +871,4 @@ footer
 @import layout/kind
 @import layout/share
 @import layout/table
+@import layout/infoline
