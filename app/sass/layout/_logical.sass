@@ -155,6 +155,49 @@ section
             left: 0
             z-index: -2
 
+.cardimg
+    &__content
+        width: 100%
+        min-height: 280px
+        margin: 0 0 40px 0
+    &__img
+        position: absolute
+        transition: 0.4s
+        &:nth-child(1)
+            transform: translateX(0)
+            :hover > &
+                transform: translateX(-40px)
+        &:nth-child(2)
+            transform: translateX(100px)
+        &:nth-child(3)
+            transform: translateX(200px)
+            :hover > &
+                transform: translateX(240px)
+
+.infoimg
+    &__content
+        display: flex
+        flex-wrap: wrap
+        &--col
+            flex-direction: column
+    &__item
+        border: 1px solid var(--stroke)
+        display: flex
+        flex: 1 1 0
+        align-items: center
+        padding: 20px 30px
+        margin: 0 15px 15px 0
+        &--last
+            visibility: hidden
+    &__img
+        width: 64px
+        height: 64px
+        text-align: center
+        margin: 0 20px 0 0
+    &__title
+        font-size: 20px
+        font-weight: 600
+
 .art-img
     background: url(../img/art__img.svg) no-repeat 50%
     background-size: contain

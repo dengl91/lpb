@@ -1,0 +1,47 @@
+// 
+// Theme Name: New Clean Template
+// _nums.sass
+//
+// app/sass/layout/
+//
+
+.nums
+    &__content
+        display: flex
+    &__item
+        border: 1px solid var(--gray__light)
+        box-shadow: 0 0 10px #0000001a
+        display: flex
+        flex-direction: column
+        align-items: center
+        flex: 1 1 0
+        padding: 30px
+        margin: 0 15px 0 0
+        svg
+            width: 140px
+            position: absolute
+            circle
+                fill: transparent
+                stroke-dasharray: 400
+                stroke-dashoffset: 400
+                stroke: var(--yellow)
+                stroke-width: 3px
+                transform: rotate(-90deg) translate(2px, 1px)
+                transform-origin: 50%
+                transition: 2s
+    &__round
+        width: 120px
+        height: 120px
+        font-size: 40px
+        font-weight: 300
+        background: #fff
+        border: 1px solid var(--stroke)
+        border-radius: 50%
+        display: flex
+        align-items: center
+        justify-content: center
+        margin: 0 0 40px 0
+        position: relative
+    &__title
+        color: var(--gray)
+        text-align: center

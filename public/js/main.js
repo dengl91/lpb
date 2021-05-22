@@ -206,6 +206,14 @@
                     target.addClass('counted');
                 }
             });
+            $('.nums__item svg circle').each(function () {
+                const target = $(this);
+                if ( isOnScreen(target) ) {
+                    const percent = target.data('percent');
+                    const dasharray = 400 - percent * 3.8;
+                    target.css('stroke-dashoffset', dasharray);
+                }
+            });
         });
 
         function countUp(target) {
