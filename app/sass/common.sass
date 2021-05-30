@@ -624,6 +624,55 @@ footer
         opacity: 1
         transform: scale(1)
 
+.result
+    &__item
+        font-size: 16px
+        border-bottom: 1px solid var(--stroke)
+        padding: 0 0 30px 0
+        margin: 0 0 30px 0
+    &__title
+        font-weight: 600
+        margin: 0 0 15px 0
+    &__description
+        color: var(--gray)
+        margin: 0 0 15px 0
+        span
+            color: var(--text)
+            background: var(--yellow)
+    &__link
+        color: var(--gray)
+        font-style: italic
+        text-decoration: underline
+
+.success
+    text-align: center
+    &__img
+        margin: 0 0 20px 0
+    &__title
+        font-size: 20px
+        font-weight: 600
+        margin: 0 0 10px 0
+    &__description
+        color: var(--gray)
+        margin: 0 0 60px 0
+    .learn-more
+        text-align: left
+        margin: 0 auto
+
+.error-page
+    margin: -100px 0 0 0
+    .container
+        height: 400px
+        background: url(../img/404.svg) no-repeat 50%
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+    &__title
+        font-size: 20px
+        font-weight: 600
+        margin: 0 0 40px 0
+
 /* Gutenberg */
 
 .wp-block-columns
@@ -728,6 +777,28 @@ footer
         top: 20px
         right: 20px
         cursor: pointer
+
+/* datepicker */
+
+.datepicker-here
+    color: var(--gray)
+    line-height: 52px
+    border: 1px solid var(--stroke)
+    padding: 0 64px 0 24px
+    margin: 0
+    position: relative
+    cursor: pointer
+.datepicker
+    &__content
+        display: flex
+        margin: 0 0 40px 0
+    &__icon
+        width: 60px
+        background: url(../img/calendar--min.svg) no-repeat 50%
+        border: 1px solid var(--stroke)
+        margin: 0 0 0 -60px
+        position: relative
+        pointer-events: none
 
 .menu-btn
     display: none
@@ -878,3 +949,4 @@ footer
 @import layout/table
 @import layout/infoline
 @import layout/nums
+@import layout/calc

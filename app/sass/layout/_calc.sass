@@ -1,0 +1,41 @@
+// 
+// Theme Name: New Clean Template
+// _calc.sass
+//
+// app/sass/layout/
+//
+
+.calc
+    &__content
+        display: flex
+        margin: 0 0 24px 0
+    &__input
+        color: var(--gray)
+        line-height: 52px
+        border: 1px solid var(--stroke)
+        padding: 0 24px
+        margin: 0
+        position: relative
+        + select
+            border-left: none
+    &__select
+        color: var(--gray)
+        line-height: 52px
+        background: url(../img/dropdown.svg) no-repeat top 50% right 20px
+        border: 1px solid var(--stroke)
+        padding: 0 42px 0 24px
+        margin: 0
+        cursor: pointer
+        -webkit-appearance: none
+        &:focus
+            outline: none
+    &__hint
+        color: var(--gray)
+        line-height: 52px
+        padding: 0 32px
+        span
+            color: var(--text)
+            font-weight: 600
+    &__outro
+        color: var(--gray)
+        line-height: 20px

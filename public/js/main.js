@@ -216,6 +216,20 @@
             });
         });
 
+        // datepicker
+
+        if ( $('.datepicker-here').length ) {
+            $datepicker = $('.datepicker-here').datepicker({
+                minDate: new Date(),
+                inline: true,
+                onSelect: function (dateText, inst) {
+                    let date = dateText.replace(/\./g, '/');
+                }
+            });
+
+            $datepicker.data('datepicker').selectDate(new Date());
+        }
+
         function countUp(target) {
             let defaultCount = parseFloat(target.text());
             let totalCount = target.data('count');

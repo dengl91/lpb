@@ -13,10 +13,21 @@
         background-size: cover
         border-right: 1px solid #fff
         padding: 120px 80px
+        position: relative
+        &::after
+            content: ''
+            width: 100%
+            height: 100%
+            background: linear-gradient(90deg, #FFD80Abf 0%, #4E89E24d 100%)
+            position: absolute
+            top: 0
+            left: 0
         &:hover
-            filter: brightness(110%) saturate(110%)
+            filter: brightness(110%) saturate(104%)
     &__img
         margin: 0 0 48px 0
+        position: relative
+        z-index: 1
         img
             height: 100px
     &__title
@@ -25,9 +36,13 @@
         line-height: 48px
         text-shadow: 0 0 4px #0000001a
         margin: 0 0 48px 0
+        position: relative
+        z-index: 1
     &__description
         font-size: 24px
         line-height: 30px
+        position: relative
+        z-index: 1
 
 @media (max-width: 1440px)
     .threecol
