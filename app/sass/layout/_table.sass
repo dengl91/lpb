@@ -62,4 +62,24 @@
             position: absolute
             top: -20px
             right: 10px
+
+@media (max-width: 768px)
+    .table
+        $c: &
+        &__content
+            margin: 0 0 0 calc(100vw - 250px)
+            overflow: auto
+            scroll-snap-type: mandatory
+            scroll-snap-type: x mandatory
+        &__item
+            flex: 0 0 200px
+            scroll-snap-align: start
+            &:first-child
+                width: 44%
+                position: absolute
+                left: 20px
+        &__header
+            #{$c}__item
+                &:first-child
+                    border: none
         
