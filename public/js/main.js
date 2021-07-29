@@ -256,6 +256,16 @@
             $(this).closest('.timeline__item').toggleClass('active');
         });
 
+        // Animated logo
+
+        $(window).scroll( function() {
+            $('.logical__bg').each(function() {
+                if ( isOnScreen(this) ) {
+                    $(this).addClass('animated');
+                }
+            });
+        });
+
         // Animation
 
         let keywords = {

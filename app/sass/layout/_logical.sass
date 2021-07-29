@@ -29,13 +29,17 @@
             content: ''
             width: 400px
             height: 800px
-            background: url(../img/lpb-logo.svg) no-repeat 50%
+            background: url(../img/lpb-logo--static.svg) no-repeat 50%
             position: absolute
             top: 40px
             left: 50%
             transform: translateX(-80%)
-            [class*=logoless] &
-                display: none
+        &.animated
+            &::after
+                background: url(../img/lpb-logo--animated.svg) no-repeat 50%
+        &.animated.loop
+            &::after
+                background: url(../img/lpb-logo--animated-loop.svg) no-repeat 50%
         .simple &
             height: 480px
             margin: 0 0 200px 0

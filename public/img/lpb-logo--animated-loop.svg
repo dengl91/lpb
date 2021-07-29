@@ -1,0 +1,21 @@
+<svg width="400px" height="800px" id="logo-animated" viewBox="0 0 400 800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <polygon class="path1" fill="#FCD60D" points="400 440 400 200 200 360"></polygon>
+    <polygon class="path2" fill="#FCD60D" points="400 440 400 200 200 360">
+        <animate id="path2" attributeName="points" begin="0;path4.end+2s" dur="0.5s" fill="freeze" restart="whenNotActive"
+            from="200 360 400 200 400 440 400 440 400 440 400 440 400 440"
+            to="200 360 400 200 400 440 200 600 200 600 200 600 200 600"
+        />
+        <animate id="path3" attributeName="points" begin="path2.end" dur="0.5s" fill="freeze" restart="whenNotActive"
+            from="200 360 400 200 400 440 200 600 200 600 200 600 200 600"
+            to="200 360 400 200 400 440 200 600 0 440 0 440 0 440"
+        />
+        <animate id="path4" attributeName="points" begin="path3.end" dur="0.5s" fill="freeze" restart="whenNotActive"
+            from="200 360 400 200 400 440 200 600 0 440 0 440 0 440"
+            to="200 360 400 200 400 440 200 600 0 440 0 200 0 200"
+        />
+        <animate id="path5" attributeName="points" begin="path4.end" dur="0.5s" fill="freeze" restart="whenNotActive"
+            from="200 360 400 200 400 440 200 600 0 440 0 200 0 200"
+            to="200 360 400 200 400 440 200 600 0 440 0 200 200 40"
+        />
+    </polygon>
+</svg>
