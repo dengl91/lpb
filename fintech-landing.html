@@ -203,7 +203,7 @@
 				<h2 style="font-size: 52px;">Why to start<br> integration with us?  </h2>
 			</div>
             <div class="col-50">
-                <div class="art-img animate__animated ac">
+                <div class="art-img animate__animated ac for-pc">
                     <div class="art-img__item">
                         <div class="art-img__title">We provide modern tech stack API</div>
                     </div>
@@ -216,6 +216,128 @@
                         <div class="art-img__title">We are the Bank with 12 years experience in Fintech</div>
                     </div>
                 </div>
+
+                <!-- What you need -->
+                <div class="art-mob animate__animated ac for-mobile">
+                    <div class="art-mob__item">
+                        <div class="art-mob__title">We provide modern tech stack API. We provide modern tech stack API. We provide modern tech stack API</div>
+                    </div>
+                    <div class="art-mob__item">
+                        <div class="art-mob__title">We are fully licensed EU Bank, collapsed and cool</div>
+                    </div>
+                    <div class="art-mob__item">
+                        <div class="art-mob__title">We are the Bank with 12 years experience in Fintech. We provide modern tech stack API. We are the Bank with 12 years experience in Fintech. We provide modern tech stack API.</div>
+                    </div>
+                </div>
+                <style>
+                    .for-mobile {
+                        display: none;
+                    }
+                    @media (max-width: 768px) {
+                        .for-pc {
+                            display: none;
+                        }
+                        .for-mobile {
+                            display: block;
+                        }
+
+                        .art-mob {
+                            margin: 20px 0;
+                        }
+                        .art-mob__item {
+                            border: 1px solid #3d3d3d;
+                            border-radius: 14px;
+                            position: relative;
+                        }
+                        .art-mob__title {
+                            font-size: 18px;
+                            font-weight: 600;
+                            padding: 30px;
+                            position: relative;
+                        }
+                        .art-mob__item:first-child {
+                            border-right: none;
+                            border-bottom: none;
+                            border-radius: 14px 0 0 14px;
+                        }
+                        .art-mob__item:first-child:before {
+                            content: '';
+                            width: 50%;
+                            height: 14px;
+                            background: #fff;
+                            display: block;
+                            position: absolute;
+                            top: -7px;
+                            right: 0;
+                        }
+                        .art-mob__item:first-child:after {
+                            content: '';
+                            width: 12px;
+                            height: 12px;
+                            background: #fff;
+                            border: 1px solid #3d3d3d;
+                            border-radius: 50%;
+                            display: block;
+                            position: absolute;
+                            top: -7px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
+                        .art-mob__item:nth-child(2) {
+                            border-top: none;
+                            border-left: none;
+                            border-bottom: none;
+                        }
+                        .art-mob__item:nth-child(2):before {
+                            content: '';
+                            width: calc(100% - 24px);
+                            height: 1px;
+                            background: #3d3d3d;
+                            display: block;
+                            position: absolute;
+                            top: 0;
+                            left: 12px;
+                        }
+                        .art-mob__item:nth-child(2):after {
+                            content: '';
+                            width: calc(100% - 24px);
+                            height: 1px;
+                            background: #3d3d3d;
+                            display: block;
+                            position: absolute;
+                            top: 100%;
+                            left: 12px;
+                        }
+                        .art-mob__item:last-child {
+                            border-top: none;
+                            border-radius: 14px 0 14px 14px;
+                        }
+                        .art-mob__item:last-child:before {
+                            content: '';
+                            width: 14px;
+                            height: 50%;
+                            background: #fff;
+                            display: block;
+                            position: absolute;
+                            top: 0;
+                            right: -7px;
+                        }
+                        .art-mob__item:last-child:after {
+                            content: '';
+                            width: 12px;
+                            height: 12px;
+                            background: #fff;
+                            border: 1px solid #3d3d3d;
+                            border-radius: 50%;
+                            display: block;
+                            position: absolute;
+                            top: 50%;
+                            right: -7px;
+                            transform: translateY(-50%);
+                        }
+                    }
+                </style>
+                <!-- What you need -->
             </div>
 		</div>
 	</section>
