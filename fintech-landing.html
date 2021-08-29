@@ -255,9 +255,15 @@
                             padding: 30px;
                             position: relative;
                         }
+                        .art-mob__round {
+                            width: 24px;
+                            height: 24px;
+                            border-left: 1px solid #3d3d3d;
+                            border-radius: 50%;
+                        }
                         .art-mob__item:first-child {
+                            width: calc(100% - 12px);
                             border-right: none;
-                            border-bottom: none;
                             border-radius: 14px 0 0 14px;
                         }
                         .art-mob__item:first-child:before {
@@ -284,11 +290,15 @@
                             transform: translateX(-50%);
                         }
                         .art-mob__item:nth-child(2) {
-                            border-top: none;
+                            width: calc(100% - 12px);
                             border-left: none;
-                            border-bottom: none;
+                            border-radius: 0 12px 12px 0;
+                            margin: -1px 0 0 12px;
                         }
-                        .art-mob__item:nth-child(2):before {
+                        .art-mob__item:nth-child(2) .art-mob__title {
+                            padding: 30px 30px 30px 18px;
+                        }
+                        /* .art-mob__item:nth-child(2):before {
                             content: '';
                             width: calc(100% - 24px);
                             height: 1px;
@@ -297,8 +307,8 @@
                             position: absolute;
                             top: 0;
                             left: 12px;
-                        }
-                        .art-mob__item:nth-child(2):after {
+                        } */
+                        /* .art-mob__item:nth-child(2):after {
                             content: '';
                             width: calc(100% - 24px);
                             height: 1px;
@@ -307,10 +317,11 @@
                             position: absolute;
                             top: 100%;
                             left: 12px;
-                        }
+                        } */
                         .art-mob__item:last-child {
-                            border-top: none;
+                            width: calc(100% - 12px);
                             border-radius: 14px 0 14px 14px;
+                            margin: -1px 0 0 0;
                         }
                         .art-mob__item:last-child:before {
                             content: '';
