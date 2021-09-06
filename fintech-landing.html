@@ -294,6 +294,8 @@
                             border-left: none;
                             border-radius: 0 12px 12px 0;
                             margin: -1px 0 0 12px;
+                            position: relative;
+                            z-index: 1;
                         }
                         .art-mob__item:nth-child(2) .art-mob__title {
                             padding: 30px 30px 30px 18px;
@@ -319,18 +321,18 @@
                             left: 12px;
                         } */
                         .art-mob__item:last-child {
-                            width: calc(100% - 12px);
+                            width: 100%;
                             border-radius: 14px 0 14px 14px;
                             margin: -1px 0 0 0;
                         }
                         .art-mob__item:last-child:before {
                             content: '';
                             width: 14px;
-                            height: 50%;
+                            height: calc(50% + 12px);
                             background: #fff;
                             display: block;
                             position: absolute;
-                            top: 0;
+                            top: -12px;
                             right: -7px;
                         }
                         .art-mob__item:last-child:after {
